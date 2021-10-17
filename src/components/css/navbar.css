@@ -1,0 +1,22 @@
+.navbar-container ul {
+  text-align: center; 
+  padding: 15px 0;
+}
+
+.navbar-container ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar-container ul li a {
+  color: black;
+}
+
+.contact-me {
+  float: right;
+  margin-right: 25px;
+}
+
+.shopping-cart {
+  margin: 0 10px;
+}

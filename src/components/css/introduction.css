@@ -1,0 +1,12 @@
+
+.intro {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-summary {
+  margin-left: 5rem;
+  max-width: 25em;
+}
