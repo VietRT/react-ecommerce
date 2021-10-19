@@ -10,7 +10,7 @@ function Products() {
 
   return (
     <section>
-      <Navbar />
+      <Navbar cartQuantity={sessionStorage.length} isHidden={sessionStorage.length > 0 ? false : true}/>
       <h1 className="merchandise-text">Merchandise</h1>
       <div className="grid-container">
         <ul className="list-container">

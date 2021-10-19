@@ -1,9 +1,8 @@
-import React from "react";
 import './css/navbar.css';
 import {Link} from 'react-router-dom';
 
+function Navbar(props) {
 
-function Navbar() {
   return (
     <header className="navbar-header">
       <div className="navbar-container">
@@ -16,8 +15,8 @@ function Navbar() {
           <li><Link to="/contact">Contact Me</Link></li>
           <div className="navbar-right">
             <a href="http://ryanstech.xyz" className="shopping-cart">
-              <i class="fa">&#xf07a;</i>
-              <span class="badge badge-warning" id="lblCartCount"> 0 </span>
+              <i className="fa">&#xf07a;</i>
+              <span className="badge badge-warning" id="lblCartCount" hidden={props.isHidden}> {props.cartQuantity} </span>
             </a>
             <a className="navbar-log-in" href="http://ryanstech.xyz">Log In</a>
           </div>                                            

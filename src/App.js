@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <main>
-      <Navbar />
+      <Navbar cartQuantity={sessionStorage.length} isHidden={sessionStorage.length > 0 ? false : true}/>
       <RenderSlide />
       <Introduction />  
       <Footer />    

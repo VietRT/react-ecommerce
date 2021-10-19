@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from '../Navbar';
 import Products_Data from '../data_models/Products_Data';
 import '../css/product.css';
@@ -7,13 +7,22 @@ function Product() {
 
   const item_list = Products_Data[Products_Data.findIndex(index => { return index.id === window.location.pathname.substring(9) })];
 
-  
+  let [cartQuant, setQuantity] = new useState(sessionStorage.length);
 
-
+  function addToCart() {
+    let cart = window.sessionStorage;
+    cart.setItem(item_list.id, JSON.stringify({
+      title: item_list.title,
+      price: item_list.price
+    }));
+    setQuantity(() => {
+      return cart.length;
+    })
+  }
 
   return (
     <section>
-      <Navbar />
+      <Navbar cartQuantity={cartQuant} isHidden={sessionStorage.length > 0 ? false : true}/>
       <div className="product-container">
         <img src={item_list.img} alt="product_image" />
         <div className="product-options"> 
@@ -28,9 +37,9 @@ function Product() {
             <option value="XL">XL</option>
           </select>
           <p></p>
-          <button type="submit" id="add-to-cart">Add To Cart</button>
-        </div>        
-    </div>        
+          <button type="submit" id="add-to-cart" onClick={addToCart}>Add To Cart</button>
+        </div>
+    </div>
     </section>
   );
 }
