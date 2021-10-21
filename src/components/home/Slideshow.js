@@ -1,6 +1,6 @@
 import React from "react";
-import slideshowData from './data_models/Slideshow_Data';
-import './css/slideshow.css';
+import slideshowData from '../data_models/Slideshow_Data';
+import '../css/slideshow.css';
 import {useState} from 'react';
 
 function Card() {

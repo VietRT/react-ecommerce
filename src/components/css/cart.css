@@ -1,0 +1,24 @@
+.cart-list {
+  display: block;
+  text-align: center;
+}
+
+.cart-item {
+  padding: 15px 0;
+  
+}
+
+#quantity {
+  width: 2rem;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.checkout {
+  max-width: 35%;
+  margin: auto;
+}
+
+.total {
+  text-align: center;
+}

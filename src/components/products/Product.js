@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from '../Navbar';
+import Navbar from '../home/Navbar';
 import Products_Data from '../data_models/Products_Data';
 import '../css/product.css';
 
@@ -12,6 +12,7 @@ function Product() {
   function addToCart() {
     let cart = window.sessionStorage;
     cart.setItem(item_list.id, JSON.stringify({
+      id: item_list.id,
       title: item_list.title,
       price: item_list.price
     }));

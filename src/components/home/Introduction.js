@@ -1,6 +1,6 @@
 import React from "react";
-import placeholder from './images/Placeholder.PNG';
-import './css/introduction.css';
+import placeholder from '../images/Placeholder.PNG';
+import '../css/introduction.css';
 
 function Introduction() {
   return (

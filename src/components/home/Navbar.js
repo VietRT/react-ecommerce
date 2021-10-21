@@ -1,4 +1,4 @@
-import './css/navbar.css';
+import '../css/navbar.css';
 import {Link} from 'react-router-dom';
 
 function Navbar(props) {
@@ -14,10 +14,10 @@ function Navbar(props) {
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/contact">Contact Me</Link></li>
           <div className="navbar-right">
-            <a href="http://ryanstech.xyz" className="shopping-cart">
+            <Link to="/cart" className="shopping-cart">
               <i className="fa">&#xf07a;</i>
               <span className="badge badge-warning" id="lblCartCount" hidden={props.isHidden}> {props.cartQuantity} </span>
-            </a>
+            </Link>
             <a className="navbar-log-in" href="http://ryanstech.xyz">Log In</a>
           </div>                                            
         </ul>   

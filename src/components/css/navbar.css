@@ -21,7 +21,7 @@
 
 .navbar-right {
   float: right;
-  margin-right: 25px;
+  /* margin-right: 25px; */
 }
 
 .navbar-right a {
@@ -31,12 +31,13 @@
 
 .fa {
   font-size: 24px;
+  color: black;
 }
 
 #lblCartCount {
   font-size: 12px;
   font-weight: bold;
-  background: #ff0000;
+  background: yellow;
   color: black;
   padding: 1px 3px;
   vertical-align: top;

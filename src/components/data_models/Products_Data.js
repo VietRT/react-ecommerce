@@ -17,7 +17,7 @@ const productsList = [
     id: "345634nrt",
     img: comingSoonPlaceholder,
     title: "Mens Jogger Shorts (Charcoal)",
-    price: "29.99USD"
+    price: "19.99USD"
   },
   {
     id: "xer6346tr",
@@ -29,7 +29,7 @@ const productsList = [
     id: "mms563rt",
     img: comingSoonPlaceholder,
     title: "Mens Tank Top (Custom-Logo)",
-    price: "29.99USD"
+    price: "39.99USD"
   },
   {
     id: "34tsgs4",
@@ -40,19 +40,19 @@ const productsList = [
   {id: "sd5345rg",
     img: comingSoonPlaceholder,
     title: "Mens Tank Top (Gray)",
-    price: "29.99USD"
+    price: "69.99USD"
   },
   {
     id: "h45ydfhert",
     img: comingSoonPlaceholder,
     title: "Unisex Wrist Bands (Multi-Colored)",
-    price: "29.99USD"
+    price: "49.99USD"
   },
   {
     id: "34tdfg43e",
     img: comingSoonPlaceholder,
     title: "Unisex Head Band (Multi-Colored)",
-    price: "29.99USD"
+    price: "19.99USD"
   }
 ];
 

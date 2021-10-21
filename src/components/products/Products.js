@@ -1,7 +1,7 @@
-import Navbar from '../Navbar';
+import Navbar from '../home/Navbar';
 import '../css/products.css';
 import productsList from "../data_models/Products_Data";
-import Footer from '../Footer';
+import Footer from '../home/Footer';
 import {Link} from 'react-router-dom';
 
 

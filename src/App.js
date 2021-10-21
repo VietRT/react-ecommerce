@@ -1,8 +1,8 @@
 import React from 'react';
-import RenderSlide from './components/RenderSlide';
-import Navbar from './components/Navbar';
-import Introduction from './components/Introduction';
-import Footer from './components/Footer';
+import RenderSlide from './components/home/RenderSlide';
+import Navbar from './components/home/Navbar';
+import Introduction from './components/home/Introduction';
+import Footer from './components/home/Footer';
 
 
 
