@@ -20,8 +20,9 @@
 }
 
 .navbar-right {
+  box-sizing: border-box;
   float: right;
-  /* margin-right: 25px; */
+  margin-right: 25px;
 }
 
 .navbar-right a {
@@ -30,6 +31,8 @@
 
 
 .fa {
+  box-sizing: border-box;
+  margin-right: 10px;
   font-size: 24px;
   color: black;
 }
@@ -43,6 +46,7 @@
   vertical-align: top;
   margin-left: -10px;
 }
+
 .badge {
 padding-left: 9px;
 padding-right: 9px;

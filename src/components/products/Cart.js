@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 import Navbar from '../home/Navbar';
 import '../css/cart.css';
 
@@ -64,7 +64,7 @@ function Cart() {
     originalPrice = parseFloat(JSON.parse(Object.values(sessionStorage)[index]).price);
 
     if(item.id === e.target.parentNode.id) {     
-      if(e.target.value > 0) { 
+      if(e.target.value > 0 && e.target.value <= 25) { 
         
         item.price = (originalPrice * e.target.value).toFixed(2);            
       }   

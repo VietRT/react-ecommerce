@@ -1,0 +1,14 @@
+.register-container {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+label {
+  display: inline-block;
+  margin: 5px 0;
+  width: 5rem;
+}
+
+#register-submit {
+  margin: 10px;
+}
