@@ -1,20 +1,34 @@
 import React from 'react';
-import App from './App';
-import Products from './components/products/Products';
-import Product from './components/products/Product';
-import Cart from "./components/products/Cart";
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './index.css';
+
+import App from './App';
+import Service from './components/service/Service';
+import Products from './components/products/Products';
+import Trending from './components/trending/Trending';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Login from './components/user/Login';
+import Register from './components/register/Register';
+
+import Product from './components/products/Product';
+import Cart from './components/products/Cart';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/" component={App} />  
-        <Route path="/products" component={Products}/>   
+        <Route exact path='/' component={App} />  
+        <Route path='/products' component={Products}/>   
         <Route path={`/product/${window.location.pathname.substring(9)}`} component={Product}/>  
-        <Route path="/cart" component={Cart}/>  
+        <Route path='/service' component={Service}/>
+        <Route path='/trending' component={Trending}/>
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/cart' component={Cart}/> 
+        <Route path='/login' component={Login}/>
+        <Route path='/register' component={Register}/>
       </Switch>
     </Router>
   </React.StrictMode>,
