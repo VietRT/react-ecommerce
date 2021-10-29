@@ -12,12 +12,12 @@ function Login() {
         <form className='login-form' action='/' method='post'>  {/*action='/login/auth*/}
           <div>
             <label htmlFor='email'>Email</label>
-            <input type='text' name='email' id='email' />
+            <input required={true} type='text' name='email' id='email' />
           </div>
 
           <div>
             <label htmlFor='password'>Password</label>          
-            <input type='password' name='password' id='password' />
+            <input required={true} type='password' name='password' id='password' />
           </div>
 
           <button type='submit' id='login-submit'>Log in</button>
