@@ -14,6 +14,7 @@ import Register from './components/register/Register';
 
 import Product from './components/products/Product';
 import Cart from './components/products/Cart';
+import PaymentMade from './components/products/Sucessfull-Payment';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.render(
         <Route path='/cart' component={Cart}/> 
         <Route path='/login' component={Login}/>
         <Route path='/register' component={Register}/>
+        <Route path='/successful-payment' component={PaymentMade}/>
       </Switch>
     </Router>
   </React.StrictMode>,

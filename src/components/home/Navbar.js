@@ -19,7 +19,7 @@ function Navbar(props) {
               {/* pages using cartAmount & displayed: about/contact/home/products/register/service/trending/user */}
               <span className='badge badge-warning' id='itemNotification' hidden={props.displayed}> {props.cartAmount} </span>
             </Link>
-            <Link to='/login'>Log In</Link>
+            <Link to='/login' className='login-btn'>Log In</Link>
           </div>                                            
         </ul>   
       </div>

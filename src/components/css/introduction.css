@@ -1,9 +1,10 @@
-
 .intro {
-  margin: 10rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 28rem;
+  background-color:gainsboro;
+  margin-top: 20px;
 }
 
 .intro-summary {

@@ -1,16 +1,15 @@
-footer {
-  background-color: black; 
-}
-
-.footer {
+.thank-you-wrapper {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content:center;
-  color: white;
-  height: 5rem;
+  margin: 15px 0;
 }
 
-.footer-copyright {
+.thank-you-wrapper div {
+  width: 20rem;
+}
+
+.payment-received {
   margin: 10px 0;
 }

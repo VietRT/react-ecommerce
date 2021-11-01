@@ -9,9 +9,9 @@ function Products() {
   
   return (
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>
-      <h1 className="merchandise-text">Merchandise</h1>
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>     
       <div className="grid-container">
+      <h1 className="merchandise-text">Merchandise</h1>
         <ul className="list-container">
           {productsList.map(item => {
             return <li className="clothe-item" key={item.id}>

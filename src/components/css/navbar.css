@@ -1,3 +1,11 @@
+.navbar-header {
+  background-color: gray;
+}
+
+.navbar-container {
+  height: 5rem;
+}
+
 .navbar-container ul {
   text-align: center; 
   padding: 15px 0;
@@ -5,7 +13,7 @@
 
 .navbar-container ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 
 .navbar-container ul li a {
@@ -29,28 +37,30 @@
   text-decoration: none;
 }
 
+.login-btn {
+  color: black;
+}
 
 .fa {
   box-sizing: border-box;
+  margin: 5px 0;
   margin-right: 10px;
   font-size: 24px;
-  color: black;
+  color: black;  
 }
 
 #itemNotification {
   font-size: 12px;
   font-weight: bold;
-  background: yellow;
+  background: blueviolet;
   color: black;
   padding: 1px 3px;
   vertical-align: top;
-  margin-left: -10px;
+  margin-left: -15px;
 }
 
 .badge {
-padding-left: 9px;
-padding-right: 9px;
--webkit-border-radius: 9px;
--moz-border-radius: 9px;
-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
 }

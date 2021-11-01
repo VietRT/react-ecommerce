@@ -5,7 +5,10 @@ function Footer() {
   return (
     <footer>
       <div className="footer">
-        <h6>R.T LLC | Copyright (c) 2021</h6>
+        <div>
+        <h6>Ryan.Truong Co. </h6>
+        <h6 className='footer-copyright'>Copyright © 2021</h6>
+        </div>        
       </div>
     </footer>
   );

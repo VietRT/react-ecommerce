@@ -45,7 +45,7 @@ function Card() {
       <div className="card">       
         <img src={product.img} alt="product" />
         <h1 id="price">{product.price}</h1>
-        <h2 id="description">{product.description}</h2>                  
+        <h5 id="description">{product.description}</h5>                  
       </div>    
       <div className="buttons-wrapper">
         <button type="text" id="previous" onClick={handlePreviousSlide}>Previous</button>

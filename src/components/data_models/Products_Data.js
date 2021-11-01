@@ -1,4 +1,4 @@
-import comingSoonPlaceholder from '../images/Product_Placeholder.PNG';
+import comingSoonPlaceholder from '../images/Product_Placeholder.png';
 
 const productsList = [
   {
