@@ -7,13 +7,12 @@ function Cart() {
   let [cart, setCart] = new useState(() => {
     let initCart = [];
     
-    Object.entries(sessionStorage).forEach((item) => {
+    Object.entries(sessionStorage).forEach((item) => {   
       initCart.push(JSON.parse(item[1]));
     });
     return initCart;
   });
 
-  //TODO:this needs fixing, breaks if cart is clicked on 0 items in cart since reduce errors out on empty array
   let [total, setTotal] = new useState(() => { 
     if(sessionStorage.length > 0) {
       let initTotal = 0;   
@@ -51,8 +50,48 @@ function Cart() {
       });
       return newTotal.toFixed(2);
     });
+  }
+
+  async function createPaymentIntent() {
     
-  
+  }
+
+  async function fetchCheckoutSession() {
+
+    const stripeData = [];
+    cart.forEach(item => {
+      stripeData.push({id: item.id, quantity: item.quantity});
+    });
+
+    const response = await fetch('http://localhost:3001/create-stripe-session', ({
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(stripeData)
+      }));
+
+      if(response.status !== 200) {
+        const error = await response.text();
+        throw new Error(error);
+      }else {
+        const success = await response.text();
+        window.location.href = JSON.parse(success).url;
+        
+        // sessionStorage.clear(); //TODO: clearing of storage should happen only if the customer has made a successful payment.
+
+      }
+  }
+
+  async function handlePayment() {
+
+    try {
+      await fetchCheckoutSession();      
+    }catch(err) {
+      console.log(err.message);
+    }
+
+
   }
 
   function handlePrice(e) {
@@ -60,20 +99,25 @@ function Cart() {
     let copy = [...cart];
     let originalPrice = 0;
 
+    let quantity = 1;
+
     copy = copy.map((item, index) => {
     originalPrice = parseFloat(JSON.parse(Object.values(sessionStorage)[index]).price);
-
+    
     if(item.id === e.target.parentNode.id) {     
-      if(e.target.value > 0 && e.target.value <= 25) { 
-        
-        item.price = (originalPrice * e.target.value).toFixed(2);            
-      }   
-      return {id: item.id, title:item.title, price: item.price};      
+    
+      e.target.value > 0 && e.target.value <= 25 ? item.price = (originalPrice * e.target.value).toFixed(2) : item.price = (originalPrice * 25).toFixed(2);
+    
+      quantity = e.target.value > 25 ? 25 : e.target.value;
+
+      return {id: item.id, title:item.title, price: item.price, quantity: quantity};   
+
     }else {
       return item;
     }
     
-  })
+  });
+
   setCart(copy);
 
   setTotal(() => {
@@ -88,21 +132,26 @@ function Cart() {
   return (
 
     <section>
-      <Navbar isHidden={sessionStorage.length > 0 ? false : true} cartQuantity={sessionStorage.length}/>
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
       <ul className="cart-list">
         {cart.map((item) => {
           return <li className="cart-item" id={item.id} key={item.id}>
-                    <h3>Item: {item.title} | Price: ${parseFloat(item.price)}</h3>                    
+                    <h3>{item.title} | Price: ${parseFloat(item.price)}</h3>                    
                     <label htmlFor="quantity">
-                      quantity
-                    </label>                    
-                    <input type="number" id="quantity" name="quantity" maxLength={2} defaultValue={1} min={1} max={25} onChange={handlePrice}/>
-                    <button type="button" id="deleteBtn" name="deleteBtn" onClick={removeItem}>remove</button>
-                    <h6>Max Quantity is 25</h6> 
+                      Quantity
+                    </label>                   
+                    {/* TODO: input needs to be adjusted better to suit for maximums above 25 and entering nothing (blank input) */}
+                    <input type="number" id="quantity" name="quantity" maxLength={2} defaultValue={1} min={1} max={25} onChange={handlePrice} />
+                    <button type="button" id="deleteBtn" name="deleteBtn" onClick={removeItem}>remove</button>                    
                   </li>
         })}
       </ul>
+      <h6 className='max-items'>Max Quantity is 25, any amount bought over the max will be submitted at 25.</h6>
       <h5 className="total" onChange={setTotal}>Total: ${total}</h5>
+      <div className="checkout"> {/* the checkout button should only appear if there is an item to be sold in the cart */}
+        <button type="button" id="checkout-btn" onClick={handlePayment}>Checkout</button>
+      </div>
+          
     </section>
   );
 }

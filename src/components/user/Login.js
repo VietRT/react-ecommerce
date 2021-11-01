@@ -6,7 +6,7 @@ import '../css/login.css';
 function Login() {
   return (
     <section>
-      <Navbar isHidden={sessionStorage.length > 0 ? false : true} cartQuantity={sessionStorage.length}/> 
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
       <div className="login-container">
         <h3 className='login'>Login</h3>
         <form className='login-form' action='/' method='post'>  {/*action='/login/auth*/}

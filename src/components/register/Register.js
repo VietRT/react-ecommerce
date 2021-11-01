@@ -11,6 +11,13 @@ function Register() {
     username: ''
   });
 
+  const [validator, setValidator] = new useState({
+    message: '',
+    style: {
+      color: ''
+    }
+  });
+
   function handleSet(key) {
     return ({target: {value}}) => {
       setInfo(previousValue => ({...previousValue, [key]: value}));
@@ -35,8 +42,16 @@ function Register() {
   });
 
   if(response.status !== 200) {
-    const errMessage = await response.text();
-    throw new Error(`${errMessage}`);
+    const error = await response.text();
+    throw new Error(`${error}`);
+  }else {
+    const success = await response.text();
+    setValidator(previous => ({...previous, message: success, style: {color: 'green'}}));
+    setInfo({    
+      email: '',
+      password:'',
+      username: ''
+    });
   }
 
   }
@@ -47,7 +62,7 @@ function Register() {
       try {
         await register();
       }catch(err) {
-        alert(`${err.message}`);
+        setValidator(previous => ({...previous, message: err.message, style: {color: 'red'}}));
       }
     
 
@@ -57,10 +72,11 @@ function Register() {
 
   return (
     <section>
-      <Navbar isHidden={sessionStorage.length > 0 ? false : true} cartQuantity={sessionStorage.length}/> 
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/> 
       <div className='register-container'>
         <h3 className='register'>Create Account</h3>
-        <form className='register-form' action='/' method='post'>
+        <h5 className='validator-message' style={validator.style}>{validator.message}</h5>
+        <form className='register-form' action='/api/user' method='post'>
 
           <div>
             <label htmlFor='username'>Username*</label>

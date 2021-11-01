@@ -7,10 +7,9 @@ import {Link} from 'react-router-dom';
 
 function Products() {
   
-
   return (
     <section>
-      <Navbar cartQuantity={sessionStorage.length} isHidden={sessionStorage.length > 0 ? false : true}/>
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>
       <h1 className="merchandise-text">Merchandise</h1>
       <div className="grid-container">
         <ul className="list-container">
@@ -18,8 +17,8 @@ function Products() {
             return <li className="clothe-item" key={item.id}>
               <Link to={`/product/${item.id}`} >
                 <img src={item.img} alt="clothing"/> 
-                <h3 id="product-caption">{item.title}</h3>
-                <h5 id="product-caption">{item.price}</h5>
+                <h3 className="product-caption">{item.title}</h3>
+                <h5 className="product-caption">{item.price}</h5>
               </Link>
             </li>
           })}

@@ -7,23 +7,24 @@ function Product() {
 
   const item_list = Products_Data[Products_Data.findIndex(index => { return index.id === window.location.pathname.substring(9) })];
 
-  let [cartQuant, setQuantity] = new useState(sessionStorage.length);
+  let [cartQuantity, setQuantity] = new useState(sessionStorage.length);
 
   function addToCart() {
     let cart = window.sessionStorage;
     cart.setItem(item_list.id, JSON.stringify({
       id: item_list.id,
       title: item_list.title,
-      price: item_list.price
+      price: item_list.price,
+      quantity: 1
     }));
     setQuantity(() => {
       return cart.length;
-    })
+    });
   }
 
   return (
     <section>
-      <Navbar cartQuantity={cartQuant} isHidden={sessionStorage.length > 0 ? false : true}/>
+      <Navbar cartAmount={cartQuantity} displayed={sessionStorage.length > 0 ? false : true}/>
       <div className="product-container">
         <img src={item_list.img} alt="product_image" />
         <div className="product-options"> 

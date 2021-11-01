@@ -8,7 +8,7 @@ function App() {
 
   return (
     <main>
-      <Navbar cartQuantity={sessionStorage.length} isHidden={sessionStorage.length > 0 ? false : true}/>
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>
       <RenderSlide />
       <Introduction />  
       <Footer />  

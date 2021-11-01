@@ -3,6 +3,7 @@
   margin-top: 5rem;
 }
 
+
 label {
   display: inline-block;
   margin: 5px 0;
@@ -12,3 +13,4 @@ label {
 #register-submit {
   margin: 10px;
 }
+

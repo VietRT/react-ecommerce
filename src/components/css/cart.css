@@ -14,11 +14,22 @@
   margin-right: 15px;
 }
 
-.checkout {
-  max-width: 35%;
-  margin: auto;
+
+.total  {
+  text-align: center;
 }
 
-.total {
+.checkout {
+  display: flex;
+  justify-content: center; 
+}
+
+.max-items {
   text-align: center;
+  margin: 10px 0;
+}
+
+#checkout-btn {
+  font-weight: bolder;
+  margin: 10px 0;
 }

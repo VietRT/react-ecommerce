@@ -16,7 +16,8 @@ function Navbar(props) {
           <div className='navbar-right'>
             <Link to='/cart' className='shopping-cart'>
               <i className='fa'>&#xf07a;</i>
-              <span className='badge badge-warning' id='lblCartCount' hidden={props.isHidden}> {props.cartQuantity} </span>
+              {/* pages using cartAmount & displayed: about/contact/home/products/register/service/trending/user */}
+              <span className='badge badge-warning' id='itemNotification' hidden={props.displayed}> {props.cartAmount} </span>
             </Link>
             <Link to='/login'>Log In</Link>
           </div>                                            

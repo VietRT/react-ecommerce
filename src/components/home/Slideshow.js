@@ -44,12 +44,12 @@ function Card() {
     <section>     
       <div className="card">       
         <img src={product.img} alt="product" />
-        <h1 className="price">{product.price}</h1>
-        <h2 className="description">{product.description}</h2>                  
+        <h1 id="price">{product.price}</h1>
+        <h2 id="description">{product.description}</h2>                  
       </div>    
       <div className="buttons-wrapper">
-        <button type="text" className="previous" onClick={handlePreviousSlide}>Previous</button>
-        <button type="text" className="next" onClick={handleNextSlide}>Next</button>  
+        <button type="text" id="previous" onClick={handlePreviousSlide}>Previous</button>
+        <button type="text" id="next" onClick={handleNextSlide}>Next</button>  
       </div>
     </section>    
     </>
