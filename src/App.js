@@ -6,6 +6,8 @@ import Footer from './components/home/Footer';
 
 function App() {
 
+  console.warn = () => {};
+
   return (
     <main>
       <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>

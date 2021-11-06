@@ -6,6 +6,7 @@ import './index.css';
 import App from './App';
 import Service from './components/service/Service';
 import Products from './components/products/Products';
+import Error from './components/error/Error';
 import Trending from './components/trending/Trending';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
@@ -21,7 +22,8 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route exact path='/' component={App} />  
-        <Route path='/products' component={Products}/>   
+        <Route exact path='/products' component={Error}/>  
+        <Route path={`/products/${window.location.pathname.substring(9)}`} component={Products}/>  
         <Route path={`/product/${window.location.pathname.substring(9)}`} component={Product}/>  
         <Route path='/service' component={Service}/>
         <Route path='/trending' component={Trending}/>

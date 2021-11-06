@@ -1,0 +1,44 @@
+.dd-wrapper {
+  display: flex;
+  min-height: 38px;
+  flex-wrap: wrap;
+}
+.dd-header_title{
+  z-index: 1;
+}
+.dd-wrapper .dd-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+}
+.dd-wrapper .dd-header_title-bold {
+  font-weight: bold;
+}
+.dd-wrapper .dd-list {
+  padding: 0;
+  margin: 0; 
+  width: 100%; 
+  margin-top: 10px;
+}
+.dd-wrapper .dd-list li {
+  list-style-type: none;
+}
+.dd-wrapper .dd-list li button {
+  display: flex;
+  justify-content: space-between;
+  background-color: gainsboro;
+  /* font-size: 16px; */
+  padding: 10px 5px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.dd-wrapper .dd-list li button:hover, .dd-wrapper .dd-list li button:focus {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+}

@@ -1,18 +1,22 @@
 import '../css/navbar.css';
 import {Link} from 'react-router-dom';
+import Dropdown from './Navbar-Drop';
+import dropdata from '../data_models/Drop_Data';
 
 function Navbar(props) {
 
   return (
     <header className='navbar-header'>
       <div className='navbar-container'>
-        <ul >       
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/service'>About Service</Link></li>
-          <li><Link to='/products'>Products</Link></li>
-          <li><Link to='/trending'>Trending Packs</Link></li>
-          <li><Link to='/about'>About Me</Link></li>
-          <li><Link to='/contact'>Contact Me</Link></li>
+        <ul>       
+          <li className='navbar-item'><Link to='/'>About</Link></li>
+          <li className='navbar-item'><Link to='/service'>Service</Link></li>
+          <li className='navbar-item'>                                                            
+            <Dropdown title='Products' items={dropdata} name='navbar-dropdown' handleSelect={props.handleDropdownSelect}/>         
+          </li>
+          <li className='navbar-item'><Link to='/trending'>Trending Packs </Link></li>
+          <li className='navbar-item'><Link to='/about'>About Me</Link></li>
+          <li className='navbar-item'><Link to='/contact'>Contact Me</Link></li>
           <div className='navbar-right'>
             <Link to='/cart' className='shopping-cart'>
               <i className='fa'>&#xf07a;</i>

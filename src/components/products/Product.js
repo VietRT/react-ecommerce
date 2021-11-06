@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import Navbar from '../home/Navbar';
-import Products_Data from '../data_models/Products_Data';
+import Product_Data from '../data_models/Product_Data';
 import '../css/product.css';
 
 function Product() {
 
-  const item_list = Products_Data[Products_Data.findIndex(index => { return index.id === window.location.pathname.substring(9) })];
+  const uri = window.location.pathname;
+
+  const itemId = uri.substring(uri.lastIndexOf('/')+ 1);
+
+  const item_list = Product_Data[Product_Data.findIndex(index => { return index.id === itemId })];
 
   let [cartQuantity, setQuantity] = new useState(sessionStorage.length);
 

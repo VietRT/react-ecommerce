@@ -1,7 +1,6 @@
 import comingSoonPlaceholder from '../images/Product_Placeholder.png';
 
-const productsList = [
-  [
+const productList = [
     {
       id: "xer6346tr",
       img: comingSoonPlaceholder,
@@ -24,9 +23,7 @@ const productsList = [
       img: comingSoonPlaceholder,
       title: "Mens Tank Top (Gray)",
       price: "45.00 usd"
-    }
-  ],
-  [
+    },
     {
       id: "5f8h47834",
       img: comingSoonPlaceholder,
@@ -44,9 +41,7 @@ const productsList = [
       img: comingSoonPlaceholder,
       title: "Mens Jogger Shorts (Charcoal)",
       price: "15.00 usd"
-    }
-  ],
-  [
+    },
     {
       id: "h45ydfhert",
       img: comingSoonPlaceholder,
@@ -58,8 +53,7 @@ const productsList = [
       img: comingSoonPlaceholder,
       title: "Unisex Head Band (Multi-Colored)",
       price: "10.00 usd"
-    }
-  ],
+    },
 ]
 
-export default productsList;
+export default productList;

@@ -53,9 +53,9 @@ function Cart(props) {
   }
 
   //TODO: create payment intent if planning to expand transaction situataions
-  async function createPaymentIntent() {
+  // async function createPaymentIntent() {
 
-  }
+  // }
 
   async function fetchCheckoutSession() {
 
