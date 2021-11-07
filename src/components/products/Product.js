@@ -11,13 +11,20 @@ function Product() {
 
   const item_list = Product_Data[Product_Data.findIndex(index => { return index.id === itemId })];
 
-  let [cartQuantity, setQuantity] = new useState(sessionStorage.length);
+  const [cartQuantity, setQuantity] = new useState(sessionStorage.length);
+  const [size, setSize] = new useState({sizeSelected: 'XS'});
 
+  function handleSize(e) {
+    setSize({sizeSelected: e.target.value});
+  }
+ 
   function addToCart() {
     let cart = window.sessionStorage;
     cart.setItem(item_list.id, JSON.stringify({
       id: item_list.id,
       title: item_list.title,
+      size: size.sizeSelected,
+      originalPrice: item_list.price,
       price: item_list.price,
       quantity: 1
     }));
@@ -35,7 +42,7 @@ function Product() {
           <h1>{item_list.title}</h1>
           <h3>{item_list.price}</h3>
           <label htmlFor="sizing">Select Size</label>
-          <select name="sizing" id="sizing-drop">
+          <select name="sizing" id="sizing-drop" onChange={handleSize}>
             <option value="XS">XS</option>
             <option value="S">S</option>
             <option value="M">M</option>

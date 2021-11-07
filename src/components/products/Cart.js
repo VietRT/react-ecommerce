@@ -2,18 +2,18 @@ import React, {useState} from "react";
 import Navbar from '../home/Navbar';
 import '../css/cart.css';
 
-function Cart(props) {
+function Cart() {
 
-  let [cart, setCart] = new useState(() => {
+  const [cart, setCart] = new useState(() => {
     let initCart = [];
     
     Object.entries(sessionStorage).forEach((item) => {   
       initCart.push(JSON.parse(item[1]));
     });
-    return initCart;
+    return initCart.reverse();
   });
 
-  let [total, setTotal] = new useState(() => { 
+  const [total, setTotal] = new useState(() => { 
     if(sessionStorage.length > 0) {
       let initTotal = 0;   
       initTotal = Object.values(sessionStorage)
@@ -26,11 +26,8 @@ function Cart(props) {
       return initTotal.toFixed(2);
     }else {
       return 0;
-    }
-    
+    }   
   });
-
-  
 
   function removeItem(e) {
     const copy = [];
@@ -95,15 +92,15 @@ function Cart(props) {
 
   }
 
-  function handlePrice(e) {
+  function handleQuantityChange(e) {
 
     let copy = [...cart];
     let originalPrice = 0;
 
-    let quantity = 1;
+    let quantity = null;
 
     copy = copy.map((item, index) => {
-    originalPrice = parseFloat(JSON.parse(Object.values(sessionStorage)[index]).price);
+    originalPrice = parseFloat(JSON.parse(Object.values(sessionStorage)[index]).originalPrice);
     
     if(item.id === e.target.parentNode.id) {     
     
@@ -111,12 +108,11 @@ function Cart(props) {
     
       quantity = e.target.value > 25 ? 25 : e.target.value;
 
-      return {id: item.id, title:item.title, price: item.price, quantity: quantity};   
+      return {id: item.id, title:item.title, size: item.size, originalPrice: copy[index].originalPrice, price: item.price, quantity: quantity};   
 
     }else {
       return item;
-    }
-    
+    }    
   });
 
   setCart(copy);
@@ -128,7 +124,12 @@ function Cart(props) {
     });
     return newTotal.toFixed(2);
   });
+  sessionStorage.setItem(e.target.parentNode.id, JSON.stringify(copy[copy.findIndex((item) => { 
+    return item.id === e.target.parentNode.id 
+  })]));
+
   }
+
 
   return (
 
@@ -137,13 +138,13 @@ function Cart(props) {
       <ul className="cart-list">
         {cart.map((item) => {
           return <li className="cart-item" id={item.id} key={item.id}>
-                    <h3>{item.title} | Price: ${parseFloat(item.price)}</h3>                    
+                    <h3>{item.title} | Size: {item.size} | Price: ${parseFloat(item.price)}</h3>                    
                     <label htmlFor="quantity">
                       Quantity
                     </label>                   
                     {/* TODO: input needs to be adjusted better to suit for maximums above 25 and entering nothing (blank input) */}
-                    <input type="number" id="quantity" name="quantity" maxLength={2} defaultValue={1} min={1} max={25} onChange={handlePrice} />
-                    <button type="button" id="deleteBtn" name="deleteBtn" onClick={removeItem}>remove</button>                    
+                    <input type="number" id="quantity" name="quantity" maxLength={2} defaultValue={item.quantity} min={1} max={25} onChange={handleQuantityChange} />
+                    <button type="button" id="deleteBtn" name="deleteBtn" onClick={removeItem}>Remove</button>                    
                   </li>
         })}
       </ul>

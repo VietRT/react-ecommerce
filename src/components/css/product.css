@@ -8,3 +8,22 @@
   margin-left: 10px;
   line-height: 3rem;
 }
+
+#deleteBtn {
+  background-color:white;
+  font-size: 13px;
+  font-weight: bolder;
+  border: none;
+  text-decoration: underline;
+}
+#add-to-cart {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 10px;
+}

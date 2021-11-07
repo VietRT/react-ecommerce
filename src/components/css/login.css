@@ -11,4 +11,14 @@ label {
 
 #login-submit {
   margin: 10px 0;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-left: 10px;
 }

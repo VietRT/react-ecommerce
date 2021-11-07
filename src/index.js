@@ -5,34 +5,28 @@ import './index.css';
 
 import App from './App';
 import Service from './components/service/Service';
-import Products from './components/products/Products';
-import Error from './components/error/Error';
+
+import productRouter from './components/products/products-router';
+
 import Trending from './components/trending/Trending';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
-import Login from './components/user/Login';
-import Register from './components/register/Register';
 
-import Product from './components/products/Product';
-import Cart from './components/products/Cart';
-import PaymentMade from './components/products/Sucessfull-Payment';
+import userRouter from './components/user/login-router';
+import registerRouter from './components/register/register-router';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path='/' component={App} />  
-        <Route exact path='/products' component={Error}/>  
-        <Route path={`/products/${window.location.pathname.substring(9)}`} component={Products}/>  
-        <Route path={`/product/${window.location.pathname.substring(9)}`} component={Product}/>  
-        <Route path='/service' component={Service}/>
-        <Route path='/trending' component={Trending}/>
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/cart' component={Cart}/> 
-        <Route path='/login' component={Login}/>
-        <Route path='/register' component={Register}/>
-        <Route path='/successful-payment' component={PaymentMade}/>
+        <Route exact path='/' component={App} key='home'/>  
+        {productRouter}
+        <Route path='/service' component={Service} key='service'/>
+        <Route path='/trending' component={Trending} key='trending'/>
+        <Route path='/about' component={About} key='about'/>
+        <Route path='/contact' component={Contact} key='contact'/>
+        {userRouter}
+        {registerRouter}
       </Switch>
     </Router>
   </React.StrictMode>,

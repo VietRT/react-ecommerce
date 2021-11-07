@@ -5,6 +5,8 @@ import dropdata from '../data_models/Drop_Data';
 
 function Navbar(props) {
 
+  console.warn = () => {};
+
   return (
     <header className='navbar-header'>
       <div className='navbar-container'>

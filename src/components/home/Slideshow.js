@@ -38,7 +38,6 @@ function Card() {
     
   }
 
-
   return (
     <>
     <section>     
@@ -48,8 +47,8 @@ function Card() {
         <h5 id="description">{product.description}</h5>                  
       </div>    
       <div className="buttons-wrapper">
-        <button type="text" id="previous" onClick={handlePreviousSlide}>Previous</button>
-        <button type="text" id="next" onClick={handleNextSlide}>Next</button>  
+        <button className='slide-btn' type="text" id="previous" onClick={handlePreviousSlide}>Previous</button>
+        <button className='slide-btn' type="text" id="next" onClick={handleNextSlide}>Next</button>  
       </div>
     </section>    
     </>

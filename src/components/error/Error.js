@@ -2,7 +2,7 @@ import React from "react";
 
 function Error() {
   return (
-    <h6>Page cannot be found.</h6>
+    <h6>Page cannot be found. Status 404</h6>
   );
 }
 
