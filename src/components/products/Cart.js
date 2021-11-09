@@ -58,10 +58,11 @@ function Cart() {
 
     const stripeData = [];
     cart.forEach(item => {
-      stripeData.push({id: item.id, quantity: item.quantity});
+      stripeData.push({id: item.id, size: item.size, quantity: item.quantity});
     });
 
-    const response = await fetch('http://localhost:3001/create-stripe-session', ({
+    //'http://localhost:3001/create-stripe-session'
+    const response = await fetch('https://ecomm-be-server.herokuapp.com/create-stripe-session', ({
         method: 'POST',
         headers: {
           'content-type': 'application/json'
