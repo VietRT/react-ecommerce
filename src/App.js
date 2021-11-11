@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import RenderSlide from './components/home/RenderSlide';
 import Navbar from './components/home/Navbar';
