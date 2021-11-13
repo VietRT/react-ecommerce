@@ -7,15 +7,21 @@
   text-align: center;
 }
 
-.list-container {
+.products-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 300px auto;
   padding: 5rem 0;
- 
+  margin-bottom: 0;
 }
 
-.list-container li a{
+@media only screen and (max-width: 524px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.products-container li a{
   text-decoration: none;
 }
 

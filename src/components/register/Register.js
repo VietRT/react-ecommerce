@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from '../home/Navbar';
 import {Link} from 'react-router-dom';
+import dropdata from '../data_models/Drop_Data';
 import '../css/register.css';
 
 function Register() {
@@ -73,7 +74,7 @@ function Register() {
 
   return (
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/> 
+      <Navbar items={dropdata} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/> 
       <div className='register-container'>
         <h3 className='register'>Create Account</h3>
         <h5 className='validator-message' style={validator.style}>{validator.message}</h5>

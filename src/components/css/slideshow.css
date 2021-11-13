@@ -3,11 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 25rem;
+  border:none;
 }
 
 #description {
-  width: 25rem;
-  margin-left: 10rem;
+  width: 20rem;
 }
 
 .buttons-wrapper {

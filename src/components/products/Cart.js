@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Navbar from '../home/Navbar';
+import dropdata from '../data_models/Drop_Data';
 import '../css/cart.css';
 
 function Cart() {
@@ -135,7 +136,7 @@ function Cart() {
   return (
 
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+      <Navbar items={dropdata} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
       <ul className="cart-list">
         {cart.map((item) => {
           return <li className="cart-item" id={item.id} key={item.id}>

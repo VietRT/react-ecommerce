@@ -5,7 +5,7 @@
 
 .cart-item {
   padding: 15px 0;
-  
+  list-style-type:none;
 }
 
 #quantity {

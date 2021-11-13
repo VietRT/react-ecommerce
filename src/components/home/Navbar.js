@@ -1,37 +1,60 @@
 import '../css/navbar.css';
-import {Link} from 'react-router-dom';
-import Dropdown from './Navbar-Drop';
-import dropdata from '../data_models/Drop_Data';
+import {Link, NavLink} from 'react-router-dom';
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 
-function Navbar(props) {
+
+function Navigation(props) {
 
   console.warn = () => {};
 
+
   return (
-    //hello from react-bootstrap branch
     <header className='navbar-header'>
-      <div className='navbar-container'>
-        <ul>       
-          <li className='navbar-item'><Link to='/'>About</Link></li>
-          <li className='navbar-item'><Link to='/service'>Service</Link></li>
-          <li className='navbar-item'>                                                            
-            <Dropdown title='Products' items={dropdata} name='navbar-dropdown' handleSelect={props.handleDropdownSelect}/>         
-          </li>
-          <li className='navbar-item'><Link to='/trending'>Trending Packs </Link></li>
-          <li className='navbar-item'><Link to='/about'>About Me</Link></li>
-          <li className='navbar-item'><Link to='/contact'>Contact Me</Link></li>
-          <div className='navbar-right'>
-            <Link to='/cart' className='shopping-cart'>
-              <i className='fa'>&#xf07a;</i>
-              {/* pages using cartAmount & displayed: about/contact/home/products/register/service/trending/user */}
+      <Navbar bg='light' expand='lg' className='bg-color'>
+        <Navbar.Brand className='brand' id='navigation-brand'>
+          Ecommerce Web Application        
+        </Navbar.Brand>         
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='mx-auto'>
+            <Nav.Link as={Link} to='/' className='navigation-list-item'>
+              About
+            </Nav.Link>
+            <Nav.Link as={Link} to='/service' className='navigation-list-item'>
+              Service
+            </Nav.Link>             
+            <NavDropdown className='navigation-dropdown' title='Products' id='basic-nav-dropdown'> 
+            {props.items.map((item) => {
+              return <NavDropdown.Item as={Link} to={`/products/${item.name.substring(0).toLowerCase()}`} className='dropdown-list-item' key={item.id} onClick={props.handleDropdownSelect}>
+                  {item.name}                  
+              </NavDropdown.Item>
+            })}
+            </NavDropdown>
+            <Nav.Link as={Link} to='/trending' className='navigation-list-item'>
+              Trending Packs
+            </Nav.Link>
+            <Nav.Link as={Link} to='/about' className='navigation-list-item'>
+              About Me
+            </Nav.Link>
+            <Nav.Link as={Link} to='/contact' className='navigation-list-item'>
+              Contact Me
+            </Nav.Link>
+          </Nav>
+          <Nav className='ms-auto'>
+            <Nav.Link as={Link} to='/cart'>                
+              {/* <Link to='/cart' className='shopping-cart'> */}
+              <i className='fa shopping-cart'>&#xf07a;</i>
               <span className='badge badge-warning' id='itemNotification' hidden={props.displayed}> {props.cartAmount} </span>
-            </Link>
-            <Link to='/login' className='login-btn'>Log In</Link>
-          </div>                                            
-        </ul>   
-      </div>
-    </header>
+            {/* </Link> */}
+            </Nav.Link>
+            <Nav.Link as={Link} to='/login' className='login-btn'>
+              Log In
+            </Nav.Link>
+          </Nav>           
+        </Navbar.Collapse>
+      </Navbar>
+    </header> 
   );
 }
 
-export default Navbar;
+export default Navigation;
