@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from '../home/Navbar';
 import '../css/products.css';
 import dropdata from '../data_models/Drop_Data';
@@ -16,7 +16,6 @@ import {Link} from 'react-router-dom';
   })]);
 
   function handleSelected(e) {    
-    console.log('test');
       dropdata.forEach((item) => {
         if(item.name === e.target.textContent) {
           setSelected(productsList[item.id]);

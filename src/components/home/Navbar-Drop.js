@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import '../css/dropdown.css';
 import onClickOutside from 'react-onclickoutside';
 
+//this component is deprecated with the implmentation of react-bootstrap navbar
+
 function Dropdown(props) {
 
   const [open, setOpen] = new useState(false);
