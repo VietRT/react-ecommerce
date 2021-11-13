@@ -16,6 +16,7 @@ import {Link} from 'react-router-dom';
   })]);
 
   function handleSelected(e) {    
+    console.log('test');
       dropdata.forEach((item) => {
         if(item.name === e.target.textContent) {
           setSelected(productsList[item.id]);
@@ -25,10 +26,10 @@ import {Link} from 'react-router-dom';
 
   return (
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected}/>     
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected} items={dropdata}/>     
       <div className="grid-container">
       <h1 className="merchandise-text">Merchandise {props.choice}</h1>
-        <ul className="list-container">
+        <ul className="products-container">
           {selected.map(item => {
             return <li className="clothe-item" key={item.id}>
               <Link to={`/product/${appendUrl}/${item.id}`} >

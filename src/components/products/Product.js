@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from '../home/Navbar';
 import Product_Data from '../data_models/Product_Data';
+import dropdata from '../data_models/Drop_Data';
 import '../css/product.css';
 
 function Product() {
@@ -35,7 +36,7 @@ function Product() {
 
   return (
     <section>
-      <Navbar cartAmount={cartQuantity} displayed={sessionStorage.length > 0 ? false : true}/>
+      <Navbar items={dropdata} cartAmount={cartQuantity} displayed={sessionStorage.length > 0 ? false : true}/>
       <div className="product-container">
         <img src={item_list.img} alt="product_image" />
         <div className="product-options"> 

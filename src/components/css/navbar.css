@@ -1,61 +1,63 @@
 .navbar-header {
-  background-color: gray;
-}
-
-.navbar-container {
-  height: 5rem;
-}
-
-.navbar-container ul {
-  text-align: center; 
-  padding: 15px 0;
-}
-
-.navbar-container ul .navbar-item {
-  display: inline-block;
-  margin: 10px 15px;
-  font-weight: bold;
-}
-
-#dropdown {
-  display:none;
-}
-
-.navbar-container ul li a {
-  text-decoration: none;
-  color: black;
-}
-
-#drop-icon {
-  font-size:17px;
-  margin: 0 5px;
-}
-
-.navbar-log-in {
-  margin-left: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.navbar-right {
   box-sizing: border-box;
-  float: right;
-  margin-right: 25px;
 }
 
-.navbar-right a {
-  text-decoration: none;
+.bg-color{ 
+  background-color: gainsboro;
 }
 
-.login-btn {
+#navigation-brand {
+  font-weight: bolder;
+}
+
+.navbar-light .navbar-nav .nav-link {
   color: black;
+  font-size: 16px;  
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: black
+}
+
+.navigation-list-item, #basic-nav-dropdown {
+  font-weight: bolder;
+  margin: 0 2rem;
+}
+
+
+@media only screen and (max-width:1395px) {
+  .navigation-list-item, #basic-nav-dropdown {
+    margin: 0 0;
+  }
+}
+
+@media only screen and (max-width:965px) {
+  .navbar-light .navbar-nav .nav-link, #basic-nav-dropdown {
+    /* margin: 0 0; */
+    padding-left: 2rem;
+    
+  }
+}
+
+#basic-nav-dropdown:hover, #basic-nav-dropdown:focus {
+  color: gray;
+}
+
+.dropdown-list-item a {
+  color: black;
+  text-decoration: none;
+  margin: 0 -10px;
+}
+
+.dropdown-list-item:hover {
+  background-color: gray;
 }
 
 .fa {
   box-sizing: border-box;
   margin: 5px 0;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: black;  
 }
 
@@ -73,4 +75,11 @@
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
+}
+
+.login-btn {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 5px;
 }
