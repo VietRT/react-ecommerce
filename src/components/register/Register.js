@@ -26,7 +26,7 @@ function Register() {
   };
 
   async function register() {
-    //'https://ecomm-be-server.herokuapp.com/api/user'
+    //'http://localhost:3001/api/user' || 'https://ecomm-be-server.herokuapp.com/api/user'
 
     const response = await fetch('http://localhost:3001/api/user', {
     method: 'POST',
