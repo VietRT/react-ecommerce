@@ -22,9 +22,9 @@ ReactDOM.render(
         <Route exact path='/' component={App} key='home'/>  
         {productRouter}
         <Route path='/service' component={Service} key='service'/>
-        <Route path='/trending' component={Trending} key='trending'/>
-        <Route path='/about' component={About} key='about'/>
-        <Route path='/contact' component={Contact} key='contact'/>
+        {/* <Route path='/trending' component={Trending} key='trending'/> */}
+        {/* <Route path='/about' component={About} key='about'/> */}
+        {/* <Route path='/contact' component={Contact} key='contact'/> */}
         {userRouter}
         {registerRouter}
       </Switch>

@@ -1,5 +1,5 @@
 import '../css/navbar.css';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 
 
@@ -12,7 +12,7 @@ function Navigation(props) {
     <header className='navbar-header'>
       <Navbar bg='light' expand='lg' className='bg-color'>
         <Navbar.Brand className='brand' id='navigation-brand'>
-          Ecommerce Web Application        
+          EWA | Ecommerce Web Application        
         </Navbar.Brand>         
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
@@ -30,15 +30,15 @@ function Navigation(props) {
               </NavDropdown.Item>
             })}
             </NavDropdown>
-            <Nav.Link as={Link} to='/trending' className='navigation-list-item'>
+            {/* <Nav.Link as={Link} to='/trending' className='navigation-list-item'>
               Trending Packs
-            </Nav.Link>
-            <Nav.Link as={Link} to='/about' className='navigation-list-item'>
+            </Nav.Link> */}
+            {/* <Nav.Link as={Link} to='/about' className='navigation-list-item'>
               About Me
-            </Nav.Link>
-            <Nav.Link as={Link} to='/contact' className='navigation-list-item'>
+            </Nav.Link> */}
+            {/* <Nav.Link as={Link} to='/contact' className='navigation-list-item'>
               Contact Me
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
           <Nav className='ms-auto'>
             <Nav.Link as={Link} to='/cart'>                

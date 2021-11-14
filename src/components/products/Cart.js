@@ -63,13 +63,13 @@ function Cart() {
     });
 
     //'http://localhost:3001/create-stripe-session' || 'https://ecomm-be-server.herokuapp.com/create-stripe-session'
-    const response = await fetch('http://localhost:3001/create-stripe-session', ({
+    const response = await fetch('https://ecomm-be-server.herokuapp.com/create-stripe-session', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
         },
         body: JSON.stringify(stripeData)
-      }));
+      });
 
       if(response.status !== 200) {
         const error = await response.text();
@@ -140,7 +140,7 @@ function Cart() {
       <ul className="cart-list">
         {cart.map((item) => {
           return <li className="cart-item" id={item.id} key={item.id}>
-                    <h3>{item.title} | Size: {item.size} | Price: ${parseFloat(item.price)}</h3>                    
+                    <h3 id='cart-product-title'>{item.title} | Size: {item.size} | Price: ${parseFloat(item.price)}</h3>                    
                     <label htmlFor="quantity">
                       Quantity
                     </label>                   

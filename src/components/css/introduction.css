@@ -10,3 +10,10 @@
 .intro-summary {
   max-width: 25em;
 }
+
+@media only screen and (max-width: 420px) {
+  .intro-summary {
+    font-size: 12px;
+    max-width: 25em;
+  }
+}

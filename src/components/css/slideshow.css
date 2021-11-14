@@ -10,6 +10,21 @@
   width: 20rem;
 }
 
+@media only screen and (max-width: 420px) {
+
+  #product, #price {
+    font-size: 12px;
+
+  }
+
+  #description {
+    font-size: 12px;
+    width: 15rem;
+    margin-left: 15px;
+  }
+  
+}
+
 .buttons-wrapper {
   display: flex;
   justify-content:center;  

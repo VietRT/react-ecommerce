@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 420px) {
+  .product-container {
+    padding: 0;
+    text-align: center;
+  }
+}
+
 .product-options {
   display: inline-block;
   margin-left: 10px;

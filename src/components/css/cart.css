@@ -8,10 +8,19 @@
   list-style-type:none;
 }
 
+@media only screen and (max-width: 420px) {
+  #cart-product-title {
+    font-size: 12px;
+    margin-right: 2rem;
+  }
+  
+}
+
 #quantity {
   width: 2rem;
   text-align: center;
   margin-right: 15px;
+  border-color: black;
 }
 
 

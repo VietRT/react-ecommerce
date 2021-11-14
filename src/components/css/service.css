@@ -1,0 +1,99 @@
+.coaching-and-training-section-container {
+  max-width: 100%;
+  font-weight: bolder;
+  background-color: gainsboro;
+  padding-bottom: 2rem;
+}
+
+.coaching-and-training {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.coaching-and-training-subsections {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.coaching-and-training-description {
+  text-align: left;
+  margin: 1rem 5rem;
+}
+
+#plan {
+  background-color:white;
+  margin-bottom: 5px;
+}
+
+#portfolio {
+  background-color: goldenrod;
+  margin-bottom: 5px;
+}
+
+#consultation {
+  color: white;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+.calender, .briefcase, .consult {
+  font-size: 48px;
+  color: wheat;
+}
+
+.enhancers-container {
+  max-width: 100%;
+}
+
+.enhancers {
+  text-align: center;
+}
+
+#enhancers-header, #commitment-header {
+  color: goldenrod;
+  font-size: 48px;
+  font-weight: bolder;
+  margin: 2rem 2rem;
+}
+
+#enhancers-description, #commitment-description {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-placeholder-image {
+  width: 100%;
+  height: 30rem;
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.carousel-description {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.col-lg-6 {
+  padding: 0;
+}
+
+.commitment-contact {
+  max-width: 100%;
+  text-align: center;
+  padding-bottom: 7rem;
+  background-color: gainsboro;
+}
+
+.calender-contact {
+  font-size: 10rem;
+  padding-top: 7rem;
+  color: black;
+}
