@@ -1,4 +1,4 @@
-const dropdata = [
+const dropData = [
   {
     id: 0,
     name: 'Tops'
@@ -13,4 +13,4 @@ const dropdata = [
   }
 ];
 
-export default dropdata;
+export default dropData;

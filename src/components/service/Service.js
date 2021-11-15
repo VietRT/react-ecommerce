@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/service.css';
 import Navbar from '../home/Navbar';
-import dropdata from '../data_models/Drop_Data';
+import dropData from '../data_models/Dropdown_Data';
 import {Container, Row, Col, Carousel} from 'react-bootstrap';
 import Gray_Placeholder from '../images/Gray_Carousel_Placeholder.png';
 import Black_Placeholder from '../images/Black_Carousel_Placeholder.png';
@@ -13,7 +13,7 @@ function Service() {
 
   return (
     <section>
-      <Navbar items={dropdata} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+      <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
 
       <Container className='coaching-and-training-section-container'>
         <Row>

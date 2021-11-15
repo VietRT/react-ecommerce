@@ -2,8 +2,18 @@
   box-sizing: border-box;
 }
 
+#brand-logo {
+  color: black;
+  margin-top: 1rem;
+  margin-left: 5px;
+}
+
 .bg-color{ 
   background-color: gainsboro;
+}
+
+.navbar-toggler.collapsed {
+  margin: 0 1rem;
 }
 
 #navigation-brand {
@@ -29,13 +39,16 @@
   .navigation-list-item, #basic-nav-dropdown {
     margin: 0 0;
   }
+
+  #full-brand-name {
+  display: none;
+  }
 }
 
 @media only screen and (max-width:965px) {
   .navbar-light .navbar-nav .nav-link, #basic-nav-dropdown {
     /* margin: 0 0; */
     padding-left: 2rem;
-    
   }
 }
 

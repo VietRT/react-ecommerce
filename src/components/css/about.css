@@ -1,0 +1,64 @@
+.about-container {
+  max-width: 100%;
+  /* margin: 2rem 0; */
+  padding: 4rem 3rem;
+  background-color: gainsboro;
+}
+
+.my-project-row {
+  text-align: center;
+}
+
+#my-project-header {
+  color: rgb(9, 20, 60);
+  font-weight:bolder;
+  font-size: 48px;
+}
+
+#my-project-description {
+  color: rgb(9, 20, 60);
+  font-weight: bold;
+  text-align: left;
+  width: 20rem;
+  margin: 0 4rem;
+}
+
+#initials {
+  font-weight: bolder;
+}
+
+#self-portrait {
+  width: 40rem;
+  height: 15.625rem;
+  margin-left: 5rem;
+}
+
+.technology-container {
+  max-width: 100%;
+  text-align:center;
+  /* background-color:rgb(9, 20, 60); */
+  background-color: goldenrod;
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#technology-stack-header {
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+.technology {
+  font-weight: bold;
+}
+
+.technology-icon {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 1rem;
+}
+
+.tech-offcanvas {
+  background: none;
+  border: none;
+}

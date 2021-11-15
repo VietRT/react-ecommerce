@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Navbar from '../home/Navbar';
 import '../css/products.css';
-import dropdata from '../data_models/Drop_Data';
+import dropData from '../data_models/Dropdown_Data';
 import productsList from "../data_models/Products_Data";
 import Footer from '../home/Footer';
 import {Link} from 'react-router-dom';
@@ -11,12 +11,12 @@ import {Link} from 'react-router-dom';
 
   const appendUrl = window.location.pathname.substring(10);
     
-  const [selected, setSelected] = new useState(productsList[dropdata.findIndex((item) => {
+  const [selected, setSelected] = new useState(productsList[dropData.findIndex((item) => {
     return item.name.toLowerCase() === appendUrl;
   })]);
 
   function handleSelected(e) {    
-      dropdata.forEach((item) => {
+      dropData.forEach((item) => {
         if(item.name === e.target.textContent) {
           setSelected(productsList[item.id]);
         }
@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom';
 
   return (
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected} items={dropdata}/>     
+      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected} items={dropData}/>     
       <div className="grid-container">
       <h1 className="merchandise-text">Merchandise {props.choice}</h1>
         <ul className="products-container">

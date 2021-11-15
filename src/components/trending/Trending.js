@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from '../home/Navbar';
-import dropdata from '../data_models/Drop_Data';
+import dropData from '../data_models/Dropdown_Data';
 
 function Trending() {
   return(
-    <Navbar items={dropdata} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+    <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
   );
 }
 

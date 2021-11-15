@@ -11,6 +11,6 @@ Next run `npm start` in the root folder
 
 Runs the app in the development mode.
 
-implementation plan (based on registered users/logged in => most likely will be imeplemented on the back end to check for user roles/permissions):
+implementation plan (based on registered users/logged in => most likely will be imeplemented on the backend to check for user roles/permissions):
 stat rating feature
 user reviews
