@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <div className="footer">
         <div>
-        <h6>Ryan.Truong Co. </h6>
+        <h6>Eccommerce Web Application</h6>
         <h6 className='footer-copyright'>Copyright © 2021</h6>
         </div>        
       </div>

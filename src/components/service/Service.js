@@ -45,7 +45,7 @@ function Service() {
         <Row className='enhancers'>
           <Col lg={6}>
             <p id='enhancers-header'>Products To Enhance Everyday Athletics</p>
-            <p id='enhancers-description'>Try out signature pre-workout powder that comes in 5 different flavors. We offer other supplements as well that is designed for beginners to expert athetlets, browse them in our shop.  </p>
+            <p id='enhancers-description'>Try out signature pre-workout powder that comes in five different flavors. We offer other supplements as well that is designed for beginners to expert, browse them in our shop.  </p>
           </Col>
           <Col lg={6}>
             <Carousel className='service-carousel'>
@@ -84,7 +84,7 @@ function Service() {
             <p id='commitment-header'>
               Free Consultation Before Any Commitment
             </p>
-            <p id='commitment-description'>Not sold on our products or training plan? No problem! Give us a call and we'll be happy to discuss more in detail how our process to give you the best plan possible to meet your fitness works.</p>
+            <p id='commitment-description'>Not sold on our products or training plan? No problem! Give us a call and we'll be happy to discuss more in detail how our process to give you the best plan possible to meet your fitness goals</p>
           </Col>
         </Row>
       </Container>

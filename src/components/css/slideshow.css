@@ -4,6 +4,7 @@
   justify-content: center;
   height: 25rem;
   border:none;
+  background-color: goldenrod;
 }
 
 #description {
@@ -14,7 +15,6 @@
 
   #product, #price {
     font-size: 12px;
-
   }
 
   #description {
@@ -28,6 +28,8 @@
 .buttons-wrapper {
   display: flex;
   justify-content:center;  
+  background-color: goldenrod;
+  padding-bottom: 2rem;
 }
 
 .slide-btn {

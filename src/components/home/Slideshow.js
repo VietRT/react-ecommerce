@@ -43,7 +43,7 @@ function Card() {
     <section>     
       <div className="card">       
         <img src={product.img} alt="product" />
-        <h1 id="price">{product.price}</h1>
+        <h1 id="price">{product.title}</h1>
         <h5 id="description">{product.description}</h5>                  
       </div>    
       <div className="buttons-wrapper">

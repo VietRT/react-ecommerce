@@ -1,15 +1,15 @@
 const dropData = [
   {
     id: 0,
-    name: 'Tops'
+    name: 'Shirts & Tanktops'
   },
   {
     id: 1,
-    name: 'Bottoms'
+    name: 'Sweatpants & Shorts'
   },
   {
     id: 2,
-    name: 'Accessories'
+    name: 'Headbands and Wristbands'
   }
 ];
 

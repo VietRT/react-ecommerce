@@ -45,7 +45,7 @@ function About() {
         <Row className='my-project-row'>
           <Col lg={6}>
           <p id='my-project-header'>Thanks for checking out my project.</p>
-          <p id='my-project-description'>This has definitely been a longtime coming project and it is only getting bigger as I keep working on it. I wanted to talk about why I started this ecommerce web application so here is a deep dive about my experiences with it.</p>
+          <p id='my-project-description'>This has definitely been a longtime coming project and it is only getting bigger as I keep working on it. I wanted to take a moment to discuss how I approached the project, what I used, and how I learned to problem solve.</p>
           <p id='initials'>-Ryan, Developer</p>
           </Col>
           <Col lg={6}>
@@ -65,7 +65,7 @@ function About() {
             .MySQL 
             .REST API
             .Stripe</p>
-            <p className='technology'>And much more.</p>
+            <p className='technology'>and much more.</p>
             <p className='technology'>Feel free to click on each of the icons to see more information.</p>
             <button className='tech-offcanvas' id='react-offcanvas' onClick={handleShow}>
               <img src={reactIcon} className='technology-icon' alt='react-icon'/>
@@ -102,7 +102,7 @@ function About() {
             <p className='experience-title'>I wish I could say every moment of my development process was rainbows and sunshine, but that's only a developer's dream.</p>
             <p className='experience-title'> Over the course of the month after starting this project, I had exciting moments such as seeing my UI and styling come to life, just as much as facing difficult issues I had to problem solve by console log, debugging, and consulting to Stack Overflow experts.</p>
             <span>
-              <p className='experience-title'>Have a look at my worse and best moments of my project, as well as how I solve problems.</p>
+              <p className='experience-title'>Have a look at my worse and best moments of my project, as well as how I problem solved.</p>
               <i className='fa arrow'>&#xf101;</i>
             </span>
           </Col>
@@ -131,7 +131,6 @@ function About() {
             </Offcanvas>
       <Footer />
     </section>
-      
   );
 }
 
