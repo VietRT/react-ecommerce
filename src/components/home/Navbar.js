@@ -6,8 +6,7 @@ import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 function Navigation(props) {
 
   console.warn = () => {};
-
-
+  
   return (
     <header className='navbar-header'>
       <Navbar bg='light' expand='lg' className='bg-color'>
@@ -27,8 +26,8 @@ function Navigation(props) {
             </Nav.Link>             
             <NavDropdown className='navigation-dropdown' title='Products' id='basic-nav-dropdown'> 
             {props.items.map((item) => {
-              return <NavDropdown.Item as={Link} to={`/products/${item.name.substring(0).toLowerCase()}`} className='dropdown-list-item' key={item.id} onClick={props.handleDropdownSelect}>
-                  {item.name}                  
+              return <NavDropdown.Item as={Link} to={`/products/${item.dropTitle.substring(0).toLowerCase()}`} className='dropdown-list-item' key={item.id} onClick={props.handleDropdownSelect}>
+                  {item.dropTitle}                  
               </NavDropdown.Item>
             })}
             </NavDropdown>

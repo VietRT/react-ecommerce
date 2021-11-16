@@ -11,7 +11,7 @@ const productRouter = [
         <Route path={`/products/${window.location.pathname.substring(10)}`} component={Products} key='products'/>,  
         <Route path={`/product/${window.location.pathname.substring(9)}`} component={Product} key='product'/>,
         <Route path='/cart' component={Cart} key='cart'/>,
-        <Route path='/successful-payment' component={PaymentMade} key='sucess-payment'/>  
+        <Route path='/successful-payment' component={PaymentMade} key='success-payment'/>  
 ];
 
 export default productRouter;

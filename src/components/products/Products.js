@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Navbar from '../home/Navbar';
 import '../css/products.css';
 import dropData from '../data_models/Dropdown_Data';
@@ -7,17 +7,20 @@ import Footer from '../home/Footer';
 import {Link} from 'react-router-dom';
 
 
-  function Products(props) {
+  function Products() {
 
   const appendUrl = window.location.pathname.substring(10);
+
+  console.log(appendUrl);
     
   const [selected, setSelected] = new useState(productsList[dropData.findIndex((item) => {
-    return item.name.toLowerCase() === appendUrl;
+    return item.dropTitle.toLowerCase() === appendUrl;
   })]);
 
   function handleSelected(e) {    
+    console.log(e.target.textContent);
       dropData.forEach((item) => {
-        if(item.name === e.target.textContent) {
+        if(item.dropTitle === e.target.textContent) {         
           setSelected(productsList[item.id]);
         }
       });
@@ -27,7 +30,7 @@ import {Link} from 'react-router-dom';
     <section>
       <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected} items={dropData}/>     
       <div className="grid-container">
-      <h1 className="merchandise-text">Merchandise {props.choice}</h1>
+      <h1 className="merchandise-text">Merchandise</h1>
         <ul className="products-container">
           {selected.map(item => {
             return <li className="clothe-item" key={item.id}>
