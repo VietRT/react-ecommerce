@@ -1,11 +1,7 @@
 .about-container {
   max-width: 100%;
-  /* margin: 2rem 0; */
   padding: 4rem 3rem;
   background-color: gainsboro;
-}
-
-.my-project-row {
   text-align: center;
 }
 
@@ -18,9 +14,6 @@
 #my-project-description {
   color: rgb(9, 20, 60);
   font-weight: bold;
-  text-align: left;
-  width: 20rem;
-  margin: 0 4rem;
 }
 
 #initials {
@@ -30,7 +23,13 @@
 #self-portrait {
   width: 40rem;
   height: 15.625rem;
-  margin-left: 5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  #self-portrait {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 .technology-container {
@@ -61,4 +60,57 @@
 .tech-offcanvas {
   background: none;
   border: none;
+}
+
+.tech-offcanvas:hover {
+  transition: all 0.35s ease-in-out;
+  transform: scale(1.3);
+}
+
+.experience-container {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background:rgb(9, 20, 60);
+  background-color: gainsboro;
+}
+
+.experience-quotes {
+  font-style: italic;
+}
+
+.experience-title {
+  font-weight: bolder;
+  font-size: 16px;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+#experience-favorite {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+#experience-issues {
+  font-weight: bolder;
+  font-size: 24px;
+  text-align: left;
+}
+
+.experience-offcanvas {
+  background: none;
+  border: none;
+}
+
+.experience-offcanvas:hover {
+  transition: all 0.35s ease-in-out;
+  transform: scale(1.3);
+}
+
+.arrow{
+  font-size: 48px;
+}
+#description-wrapper {
+  white-space: pre-line;
 }

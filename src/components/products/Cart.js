@@ -153,8 +153,9 @@ function Cart() {
       <h6 className='max-items'>Max Quantity is 25, any amount bought over the max will be submitted at 25.</h6>
       <h5 className="total" onChange={setTotal}>Total: ${total}</h5>
       <div className="checkout"> {/* the checkout button should only appear if there is an item to be sold in the cart */}
-        <button type="button" id="checkout-btn" onClick={handlePayment} hidden={sessionStorage.length > 0 ? false : true}>Checkout</button>
+        <button type="button" id="checkout-btn" onClick={handlePayment} hidden={sessionStorage.length > 0 ? false : true}>Checkout</button>       
       </div>
+      <p id='checking-warning'>[checkout button may take two taps to go off sometime.]</p>
           
     </section>
   );

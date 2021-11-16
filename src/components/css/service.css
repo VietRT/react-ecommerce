@@ -1,11 +1,11 @@
 .coaching-and-training-section-container {
   max-width: 100%;
-  font-weight: bolder;
   background-color: gainsboro;
   padding-bottom: 2rem;
 }
 
 .coaching-and-training {
+  font-weight: bolder;
   text-align: center;
   margin: 5rem 0;
 }
@@ -17,6 +17,7 @@
 
 .coaching-and-training-description {
   text-align: left;
+  font-weight: bold;
   margin: 1rem 5rem;
 }
 

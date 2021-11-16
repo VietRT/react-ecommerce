@@ -55,3 +55,7 @@
   cursor: pointer;
   margin-left: 10px;
 }
+
+#checking-warning {
+  text-align: center
+}
