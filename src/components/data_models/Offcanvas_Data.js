@@ -1,6 +1,6 @@
 const offcanvasData = [
   {   
-    id: 'React-offcanvas',
+    id: 'react-offcanvas',
     offcanvasTitle: 'My experience with ReactJS',
     offcanvasBody: `React is a front-end component based UI library. It allows for the making of robust and reuseable components that can be used anywhere in the application, even within another component. React is a step up from vanilla JavaScript because it moves away from the traditional DOM (Document Object Model) manipulation. \n
     Each React component is bound by state cycle management. In a functional component, these states are managed by React hooks. Hooks allow us to perform actions when the current state is changed such as a change in an input.`

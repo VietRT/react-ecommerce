@@ -14,13 +14,13 @@ import {Link} from 'react-router-dom';
   console.log(appendUrl);
     
   const [selected, setSelected] = new useState(productsList[dropData.findIndex((item) => {
-    return item.dropTitle.toLowerCase() === appendUrl;
+    return item.menuItem.toLowerCase() === appendUrl;
   })]);
 
   function handleSelected(e) {    
     console.log(e.target.textContent);
       dropData.forEach((item) => {
-        if(item.dropTitle === e.target.textContent) {         
+        if(item.menuItem === e.target.textContent) {         
           setSelected(productsList[item.id]);
         }
       });

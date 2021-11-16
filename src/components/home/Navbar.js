@@ -26,8 +26,8 @@ function Navigation(props) {
             </Nav.Link>             
             <NavDropdown className='navigation-dropdown' title='Products' id='basic-nav-dropdown'> 
             {props.items.map((item) => {
-              return <NavDropdown.Item as={Link} to={`/products/${item.dropTitle.substring(0).toLowerCase()}`} className='dropdown-list-item' key={item.id} onClick={props.handleDropdownSelect}>
-                  {item.dropTitle}                  
+              return <NavDropdown.Item as={Link} to={`/products/${item.menuItem.substring(0).toLowerCase()}`} className='dropdown-list-item' key={item.id} onClick={props.handleDropdownSelect}>
+                  {item.menuItem}                  
               </NavDropdown.Item>
             })}
             </NavDropdown>
