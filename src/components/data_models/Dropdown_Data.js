@@ -1,7 +1,7 @@
 const dropData = [
   {
     id: 0,
-    menuItem: 'TankTops',
+    menuItem: 'Shirts',
     category: 'tops'
   },
   {

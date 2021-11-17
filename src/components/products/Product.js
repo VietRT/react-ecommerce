@@ -40,8 +40,8 @@ function Product() {
       <div className="product-container">
         <img src={item_list.img} alt="product_image" />
         <div className="product-options"> 
-          <h1>{item_list.title}</h1>
-          <h3>{item_list.price}</h3>
+          <p id='product-name'>{item_list.title}</p>
+          <p id='product-price'>{item_list.price}</p>
           <label htmlFor="sizing">Select Size</label>
           <select name="sizing" id="sizing-drop" onChange={handleSize}>
             <option value="XS">XS</option>

@@ -7,10 +7,18 @@ Note: to see the project in its fullest completion, you should also run the ecom
 A proper MySQL database and table configuration is required to see all implemented features.
 
 To start this project in development, make sure to ofcourse have NodeJS when attempting to run the project and npm install to get all dependecies.
-Next run `npm start` in the root folder
+Next run `npm start` in the root folder.
 
 Runs the app in the development mode.
 
-implementation plan (based on registered users/logged in => most likely will be imeplemented on the backend to check for user roles/permissions):
-stat rating feature
-user reviews
+implementation list:
+
+user login session - backend to check for user roles/permissions, considering using jwt library
+
+stat rating feature - frontend react component with backend data persistence
+
+user reviews - frontend with backend data persistence
+
+authentication for REST API - backend permissions page management
+
+auto-deployment for react application 

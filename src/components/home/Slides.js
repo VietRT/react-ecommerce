@@ -1,23 +1,25 @@
 import React from "react";
-import slideshowData from '../data_models/Slideshow_Data';
-import '../css/slideshow.css';
+import slidesData from '../data_models/Slides_Data';
+import '../css/slides.css';
 import {useState} from 'react';
 
-function Card() {
+//component is deprecated since creation of carousel component from react-bootstrap
 
-  let [product, setProduct] = new useState(slideshowData[0]);
+function Slides() {
+
+  let [product, setProduct] = new useState(slidesData[0]);
 
 
   function handleNextSlide(event) {
     event.preventDefault();  
-    if(slideshowData.findIndex(index => index.id === product.id) < slideshowData.length-1) {
+    if(slidesData.findIndex(index => index.id === product.id) < slidesData.length-1) {
       setProduct(() => {
-        return slideshowData[slideshowData.findIndex(index => index.id === product.id)+1];
+        return slidesData[slidesData.findIndex(index => index.id === product.id)+1];
       });
     }
     else {
       setProduct(() => {
-        return slideshowData[0];
+        return slidesData[0];
       });
     }
         
@@ -25,14 +27,14 @@ function Card() {
 
   function handlePreviousSlide(event) {
     event.preventDefault();
-    if(slideshowData.findIndex(index => index.id === product.id) > 0) {
+    if(slidesData.findIndex(index => index.id === product.id) > 0) {
       setProduct(() => {
-        return slideshowData[slideshowData.findIndex(index => index.id === product.id)-1];
+        return slidesData[slidesData.findIndex(index => index.id === product.id)-1];
       });
     }
     else {
       setProduct(() => {
-        return slideshowData[slideshowData.length-1];
+        return slidesData[slidesData.length-1];
       });
     }
     
@@ -55,4 +57,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Slides;

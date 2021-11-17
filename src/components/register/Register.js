@@ -82,17 +82,17 @@ function Register() {
 
           <div>
             <label htmlFor='username'>Username*</label>
-            <input type='text' required={true} name='username' id='username' value={information.username} onChange={handleSet('username')}/>
+            <input type='text' required={true} name='username' id='username' value={information.username} autocomplete="off" onChange={handleSet('username')}/>
           </div>
 
           <div>
             <label htmlFor='email'>Email*</label>
-            <input type='text'required={true} name='email' id='email' value={information.email} onChange={handleSet('email')} />
+            <input type='text'required={true} name='email' id='email' value={information.email} autocomplete="off" onChange={handleSet('email')} />
           </div>
 
           <div>
             <label htmlFor='password'>Password*</label>          
-            <input type='password' required={true} name='password' id='password' value={information.password} onChange={handleSet('password')} />
+            <input type='password' required={true} name='password' id='password' value={information.password} autocomplete="off" onChange={handleSet('password')} />
           </div>
 
           <button type='submit' id='register-submit' onClick={handleSubmit}>Create Account</button>

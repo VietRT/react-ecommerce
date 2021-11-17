@@ -11,14 +11,11 @@ import {Link} from 'react-router-dom';
 
   const appendUrl = window.location.pathname.substring(10);
 
-  console.log(appendUrl);
-    
   const [selected, setSelected] = new useState(productsList[dropData.findIndex((item) => {
     return item.menuItem.toLowerCase() === appendUrl;
   })]);
 
   function handleSelected(e) {    
-    console.log(e.target.textContent);
       dropData.forEach((item) => {
         if(item.menuItem === e.target.textContent) {         
           setSelected(productsList[item.id]);
@@ -35,7 +32,7 @@ import {Link} from 'react-router-dom';
           {selected.map(item => {
             return <li className="clothe-item" key={item.id}>
               <Link to={`/product/${appendUrl}/${item.id}`} >
-                <img src={item.img} alt="clothing"/> 
+                <img id='products-img' src={item.img} alt="clothing"/> 
                 <h3 className="product-caption">{item.title}</h3>
                 <h5 className="product-caption">{item.price}</h5>
               </Link>

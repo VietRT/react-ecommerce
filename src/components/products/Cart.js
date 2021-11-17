@@ -155,7 +155,7 @@ function Cart() {
       <div className="checkout"> {/* the checkout button should only appear if there is an item to be sold in the cart */}
         <button type="button" id="checkout-btn" onClick={handlePayment} hidden={sessionStorage.length > 0 ? false : true}>Checkout</button>       
       </div>
-      <p id='checking-warning'>[checkout button may take two taps to go off sometime.]</p>
+      <p id='checking-warning' hidden={sessionStorage.length > 0 ? false : true}>[checkout button may take two taps to go off sometime.]</p>
           
     </section>
   );
