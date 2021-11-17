@@ -1,3 +1,5 @@
+/* css is deprecated since creation of carousel component from react-bootstrap */
+
 .card {
   display: flex;
   align-items: center;

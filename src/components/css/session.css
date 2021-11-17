@@ -1,0 +1,38 @@
+.home-session-container {
+  background-color: gainsboro;
+  max-width: 100%;
+  text-align: center; 
+  font-weight: bold;
+  padding: 5rem 0;
+}
+
+.session-row {
+ --bs-gutter-x: 0;
+}
+
+.session-col p:first-of-type {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 425px) {
+  .session-col p:last-of-type {
+    font-size: 16px;
+    line-height: 2rem;
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .session-col p:last-of-type {
+    padding: 0 5px;
+  }
+}
+
+.three-step {
+  padding: 1rem;
+}
+
+.task-management {
+  font-size: 72px;
+}

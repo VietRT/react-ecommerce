@@ -40,6 +40,11 @@
 
 #deleteBtn {
   cursor: pointer;
+  background-color:white;
+  font-size: 13px;
+  font-weight: bolder;
+  border: none;
+  text-decoration: underline;
 }
 
 #checkout-btn {

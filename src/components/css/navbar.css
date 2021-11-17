@@ -26,14 +26,13 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: black
+  color: goldenrod;
 }
 
 .navigation-list-item, #basic-nav-dropdown {
   font-weight: bolder;
   margin: 0 2rem;
 }
-
 
 @media only screen and (max-width:1395px) {
   .navigation-list-item, #basic-nav-dropdown {
@@ -50,10 +49,10 @@
     /* margin: 0 0; */
     padding-left: 2rem;
   }
-}
 
-#basic-nav-dropdown:hover, #basic-nav-dropdown:focus {
-  color: gray;
+  .dropdown-list-item {
+    padding-left: 2rem;
+  }
 }
 
 .dropdown-list-item a {
@@ -62,13 +61,8 @@
   margin: 0 -10px;
 }
 
-.dropdown-list-item:hover {
-  background-color: gray;
-}
-
 .fa {
   box-sizing: border-box;
-  margin: 5px 0;
   margin-right: 10px;
   font-size: 20px;
   color: black;  

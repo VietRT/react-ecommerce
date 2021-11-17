@@ -10,24 +10,29 @@
   }
 }
 
-.product-options {
-  display: inline-block;
-  margin-left: 10px;
-  line-height: 3rem;
+#product-name {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-#deleteBtn {
-  background-color:white;
-  font-size: 13px;
-  font-weight: bolder;
-  border: none;
-  text-decoration: underline;
+#product-price{
+  font-size: 16px;
+  font-weight: bold;
 }
+
+.product-options {
+  margin-left: 10px;
+}
+
+#sizing-drop {
+  border: 1px solid black;
+}
+
 #add-to-cart {
   background-color: black;
   border: none;
   color: white;
-  padding: 0 15px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   font-size: 12px;
