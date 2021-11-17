@@ -17,6 +17,12 @@
   }
 }
 
+@media only screen and (max-width: 280px) {
+  .products-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .products-container li a{
   text-decoration: none;
 }

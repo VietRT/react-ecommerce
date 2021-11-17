@@ -40,7 +40,7 @@ import {Link} from 'react-router-dom';
           })}
         </ul>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </section>    
   );
 }
