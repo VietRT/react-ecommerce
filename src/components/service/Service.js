@@ -31,12 +31,12 @@ function Service() {
           <Col id='portfolio'>
             <h3>Individual Diet Portfolio</h3>
             <i className='fa briefcase'>&#xf0b1;</i>
-            <p className='coaching-and-training-description'>Everyone needs to understand getting into shape isn't just about how you train yourself physically, diet is an important priority in order to lose fat or gain muscle.</p>            
+            <p className='coaching-and-training-description'>Everyone needs to understand getting into shape isn't just about how you train yourself physically, diet is just as important to order to lose fat or gain muscle.</p>            
           </Col>
           <Col id='consultation'>
             <h3>Life-Time Consultation</h3>
             <i className='fa consult'>&#xf2b5;</i>
-            <p className='coaching-and-training-description'>Getting stuck or not seeing progress? Contact me and we'll have a discussion about how you have been doing on your diet or working plan, then modify as needed if you dont see results.</p>           
+            <p className='coaching-and-training-description'>Getting stuck or not seeing progress with our guidance? Give us a call and we can modify as neccessary to make sure you have a sustainable diet and workout routine.</p>           
           </Col>
         </Row>        
       </Container>
@@ -45,7 +45,7 @@ function Service() {
         <Row className='enhancers'>
           <Col lg={6}>
             <p id='enhancers-header'>Products To Enhance Everyday Athletics</p>
-            <p id='enhancers-description'>Try out signature pre-workout powder that comes in five different flavors. We offer other supplements as well that is designed for beginners to expert, browse them in our shop.  </p>
+            <p id='enhancers-description'>Try out signature pre-workout powder that comes in five different flavors. We offer other supplements as well that is designed for beginners to expert.Browse them in our shop.  </p>
           </Col>
           <Col lg={6}>
             <Carousel className='service-carousel'>
