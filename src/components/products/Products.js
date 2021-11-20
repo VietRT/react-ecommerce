@@ -3,7 +3,6 @@ import Navbar from '../home/Navbar';
 import '../css/products.css';
 import dropData from '../data_models/Dropdown_Data';
 import productsList from "../data_models/Products_Data";
-import Footer from '../home/Footer';
 import {Link} from 'react-router-dom';
 
 
@@ -40,7 +39,6 @@ import {Link} from 'react-router-dom';
           })}
         </ul>
       </div>
-      {/* <Footer /> */}
     </section>    
   );
 }

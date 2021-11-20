@@ -1,9 +1,3 @@
-#brand-logo {
-  color: black;
-  margin-top: 1rem;
-  margin-left: 5px;
-}
-
 .bg-color{ 
   background-color: gainsboro;
 }
@@ -16,6 +10,8 @@
   font-weight: bolder;
   font-size: 16px;
   color: goldenrod;
+  margin-top: 1rem;
+  margin-left: 5px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -33,24 +29,32 @@
   margin: 0 2rem;
 }
 
-@media only screen and (max-width:1395px) {
+@media only screen and (max-width:1280px) {
   .navigation-list-item, #basic-nav-dropdown {
-    margin: 0 0;
+    margin: 0 1rem;
   }
 
   #full-brand-name {
   display: none;
   }
+
+  #brand-logo {
+    padding-right: 10rem;
+  }
 }
 
-@media only screen and (max-width:965px) {
+@media only screen and (max-width:768px) {
   .navbar-light .navbar-nav .nav-link, #basic-nav-dropdown {
-    /* margin: 0 0; */
+    margin: 0 0; 
     padding-left: 2rem;
   }
 
   .dropdown-list-item {
     padding-left: 2rem;
+  }
+
+  #brand-logo {
+    padding-right: 0;
   }
 }
 

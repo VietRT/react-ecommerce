@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 320px) {
   .products-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -37,7 +37,6 @@
 .product-caption {
   color: black;
   font-size: 16px;
-
 }
 
 h3, h5{

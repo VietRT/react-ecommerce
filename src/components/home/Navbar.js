@@ -43,14 +43,7 @@ function Navigation(props) {
             {/* <Nav.Link as={Link} to='/contact' className='navigation-list-item'>
               Contact Me
             </Nav.Link> */}
-          </Nav>
-          <Nav.Link as={Link} to='/login' id='login-btn' hidden={props.valid}> 
-              Log In
-            </Nav.Link>
-            <Nav.Link as={Link} to='/user/member' id='logged-in' hidden={!props.valid}> {/* should make this user link to a members page */} 
-              {props.user}
-            </Nav.Link>
-          </Navbar.Collapse>
+          </Nav>       
           <Nav className='ms-auto'>
             <Nav.Link as={Link} to='/cart'>                
               {/* <Link to='/cart' className='shopping-cart'> */}
@@ -60,8 +53,14 @@ function Navigation(props) {
               </span>
             {/* </Link> */}
             </Nav.Link>
+            <Nav.Link as={Link} to='/login' id='login-btn' hidden={props.valid}> 
+              Log In
+            </Nav.Link>
+            <Nav.Link as={Link} to='/user/member' id='logged-in' hidden={!props.valid}> {/* should make this user link to a members page */} 
+              {props.user}
+            </Nav.Link>
           </Nav>           
-        
+        </Navbar.Collapse>
       </Navbar>
     </header> 
   );

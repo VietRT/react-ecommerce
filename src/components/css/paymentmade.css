@@ -13,3 +13,12 @@
 .payment-received {
   margin: 10px 0;
 }
+
+#back-to-home {
+  border: none;
+  background: none;
+}
+
+#back-to-home a{
+  text-decoration: none;
+}
