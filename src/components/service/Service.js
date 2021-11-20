@@ -13,7 +13,7 @@ function Service() {
 
   return (
     <section>
-      <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+      <Navbar items={dropData} />
 
       <Container className='coaching-and-training-section-container'>
         <Row>
@@ -45,7 +45,7 @@ function Service() {
         <Row className='enhancers'>
           <Col lg={6}>
             <p id='enhancers-header'>Products To Enhance Everyday Athletics</p>
-            <p id='enhancers-description'>Try out signature pre-workout powder that comes in five different flavors. We offer other supplements as well that is designed for beginners to expert.Browse them in our shop.  </p>
+            <p id='enhancers-description'>Try out signature pre-workout powder that comes in five different flavors. We offer other supplements as well that is designed for beginners to expert.  </p>
           </Col>
           <Col lg={6}>
             <Carousel className='service-carousel'>

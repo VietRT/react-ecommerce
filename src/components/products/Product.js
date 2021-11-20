@@ -12,7 +12,7 @@ function Product() {
 
   const item_list = Product_Data[Product_Data.findIndex(index => { return index.id === itemId })];
 
-  const [cartQuantity, setQuantity] = new useState(sessionStorage.length);
+  const [itemAmount, setItemAmount] = new useState(sessionStorage.length);
   const [size, setSize] = new useState({sizeSelected: 'XS'});
 
   function handleSize(e) {
@@ -29,14 +29,12 @@ function Product() {
       price: item_list.price,
       quantity: 1
     }));
-    setQuantity(() => {
-      return cart.length;
-    });
+    setItemAmount();
   }
 
   return (
     <section>
-      <Navbar items={dropData} cartAmount={cartQuantity} displayed={sessionStorage.length > 0 ? false : true}/>
+      <Navbar items={dropData} />
       <div className="product-container">
         <img src={item_list.img} alt="product_image" />
         <div className="product-options"> 

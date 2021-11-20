@@ -40,7 +40,7 @@ function About() {
 
   return (
     <section>
-      <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+      <Navbar items={dropData} />
       <Container className='about-container'>
         <Row className='my-project-row'>
           <Col lg={6}>

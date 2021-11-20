@@ -50,7 +50,7 @@ function Cart() {
     });
   }
 
-  //TODO: create payment intent if planning to expand transaction situataions
+  // create payment intent if planning to expand transaction situataions
   // async function createPaymentIntent() {
 
   // }
@@ -63,7 +63,7 @@ function Cart() {
     });
 
     //'http://localhost:3001/create-stripe-session' || 'https://ecomm-be-server.herokuapp.com/create-stripe-session'
-    const response = await fetch('https://ecomm-be-server.herokuapp.com/create-stripe-session', {
+    const response = await fetch('http://localhost:3001/create-stripe-session', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
@@ -136,7 +136,7 @@ function Cart() {
   return (
 
     <section>
-      <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} />
+      <Navbar items={dropData} />
       <ul className="cart-list">
         {cart.map((item) => {
           return <li className="cart-item" id={item.id} key={item.id}>

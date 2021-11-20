@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/navbar.css';
 import {Link} from 'react-router-dom';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
@@ -6,7 +7,9 @@ import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 function Navigation(props) {
 
   console.warn = () => {};
-  
+
+
+
   return (
     <header className='navbar-header'>
       <Navbar bg='light' expand='lg' className='bg-color'>
@@ -41,18 +44,24 @@ function Navigation(props) {
               Contact Me
             </Nav.Link> */}
           </Nav>
+          <Nav.Link as={Link} to='/login' id='login-btn' hidden={props.valid}> 
+              Log In
+            </Nav.Link>
+            <Nav.Link as={Link} to='/user/member' id='logged-in' hidden={!props.valid}> {/* should make this user link to a members page */} 
+              {props.user}
+            </Nav.Link>
+          </Navbar.Collapse>
           <Nav className='ms-auto'>
             <Nav.Link as={Link} to='/cart'>                
               {/* <Link to='/cart' className='shopping-cart'> */}
               <i className='fa shopping-cart'>&#xf07a;</i>
-              <span className='badge badge-warning' id='itemNotification' hidden={props.displayed}> {props.cartAmount} </span>
+              <span className='badge badge-warning' id='itemNotification' hidden={sessionStorage.length > 0 ? false : true}> 
+              {sessionStorage.length}
+              </span>
             {/* </Link> */}
             </Nav.Link>
-            <Nav.Link as={Link} to='/login' className='login-btn'>
-              Log In
-            </Nav.Link>
           </Nav>           
-        </Navbar.Collapse>
+        
       </Navbar>
     </header> 
   );

@@ -28,7 +28,7 @@ function Register() {
   async function register() {
     //'http://localhost:3001/api/user' || 'https://ecomm-be-server.herokuapp.com/api/user'
 
-    const response = await fetch('https://ecomm-be-server.herokuapp.com/api/user', {
+    const response = await fetch('http://localhost:3001/api/user', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ function Register() {
 
   return (
     <section>
-      <Navbar items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/> 
+      <Navbar items={dropData} /> 
       <div className='register-container'>
         <h3 className='register'>Create Account</h3>
         <h5 className='validator-message' style={validator.style}>{validator.message}</h5>
@@ -82,17 +82,17 @@ function Register() {
 
           <div>
             <label htmlFor='username'>Username*</label>
-            <input type='text' required={true} name='username' id='username' value={information.username} autocomplete="off" onChange={handleSet('username')}/>
+            <input type='text' required={true} name='username' id='username' value={information.username} autoComplete="off" onChange={handleSet('username')}/>
           </div>
 
           <div>
             <label htmlFor='email'>Email*</label>
-            <input type='text'required={true} name='email' id='email' value={information.email} autocomplete="off" onChange={handleSet('email')} />
+            <input type='text'required={true} name='email' id='email' value={information.email} autoComplete="off" onChange={handleSet('email')} />
           </div>
 
           <div>
             <label htmlFor='password'>Password*</label>          
-            <input type='password' required={true} name='password' id='password' value={information.password} autocomplete="off" onChange={handleSet('password')} />
+            <input type='password' required={true} name='password' id='password' value={information.password} autoComplete="off" onChange={handleSet('password')} />
           </div>
 
           <button type='submit' id='register-submit' onClick={handleSubmit}>Create Account</button>

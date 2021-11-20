@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../css/paymentmade.css';
 import Navbar from '../home/Navbar';
+import dropdata  from '../data_models/Dropdown_Data';
 
 function PaymentMade() {
+
+  useEffect(() => {
+    sessionStorage.clear();
+  })
+
   return (
     <session className='paymentmade-container'>
-      <Navbar cartAmount={sessionStorage.clear()} displayed={true}/>
+      <Navbar items={dropdata}/>
       <div className='thank-you-wrapper'>
         <div>
           <p>Thank you</p>

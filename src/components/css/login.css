@@ -22,3 +22,7 @@ label {
   cursor: pointer;
   margin-left: 10px;
 }
+
+#login-error {
+  color: red;
+}

@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom';
 
   return (
     <section>
-      <Navbar cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true} handleDropdownSelect={handleSelected} items={dropData}/>     
+      <Navbar handleDropdownSelect={handleSelected} items={dropData}/>     
       <div className="grid-container">
       <h1 className="merchandise-text">Merchandise</h1>
         <ul className="products-container">

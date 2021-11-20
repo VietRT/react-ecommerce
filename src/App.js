@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main>
-      <Navigation items={dropData} cartAmount={sessionStorage.length} displayed={sessionStorage.length > 0 ? false : true}/>
+      <Navigation items={dropData} />
       <Carousel />
       <Session />  
       <Footer />  

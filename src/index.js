@@ -8,9 +8,9 @@ import Service from './components/service/Service';
 
 import productRouter from './components/products/products-router';
 
-import Trending from './components/trending/Trending';
+// import Trending from './components/trending/Trending';
 import About from './components/about/About';
-import Contact from './components/contact/Contact';
+// import Contact from './components/contact/Contact';
 
 import userRouter from './components/user/login-router';
 import registerRouter from './components/register/register-router';

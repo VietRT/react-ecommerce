@@ -10,7 +10,7 @@ function Session() {
           <Col className='session-col'>
           <p>What can we offer you?</p>
           <p>
-            Our coaching and training is different for each individual we help and we'll work with you from start to end to meet the goals to set. Find out how we work with you to get you started with services such as workout planning to and life-time consultation so you always know we're here to help.
+            Our coaching and training is different for each individual we help and we'll work with you from start to end to meet the goals you set. Find out how we work with you to get you started with services such as workout planning and life-time consultation so you always know we're here to help.
           </p>
           </Col>
         </Row>
