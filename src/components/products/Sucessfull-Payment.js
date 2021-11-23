@@ -14,7 +14,7 @@ function PaymentMade() {
       <div className='thank-you-wrapper'>
         <div>
           <p>Thank you</p>
-          <p className='payment-received'>Payment has been received and your order will be process and notification received when order has shipped.</p>
+          <p className='payment-received'>Payment has been received and your order will be process and receive notification when order has shipped.</p>
           <button type='button' id='back-to-home'>
             <Link to='/'>Return to Homepage</Link>
           </button>

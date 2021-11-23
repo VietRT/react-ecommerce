@@ -66,10 +66,6 @@ function Register() {
       }catch(err) {
         setValidator(previous => ({...previous, message: err.message, style: {color: 'red'}}));
       }
-    
-
-
-
   }
 
   return (

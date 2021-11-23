@@ -14,6 +14,7 @@ Runs the app in the development mode.
 implementation list:
 
 user login session - backend to check for user roles/permissions, considering using jwt library
+user login session has been implemented using localStorage, not my IDEAL solution but it solves the problem of user session clearing on refreshes
 
 stat rating feature - frontend react component with backend data persistence
 
