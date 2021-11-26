@@ -8,6 +8,11 @@
   list-style-type:none;
 }
 
+#cart-product-title {
+  font-size: 16px;
+  margin-right: 2rem;
+}
+
 @media only screen and (max-width: 420px) {
   #cart-product-title {
     font-size: 12px;

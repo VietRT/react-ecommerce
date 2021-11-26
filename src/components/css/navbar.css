@@ -92,8 +92,8 @@
   font-weight: bold;
   text-decoration: none;
   margin-right: 5px;
+  white-space: nowrap;
 }
-
 
 .member-navigation-dropdown div.dropdown-menu {
   min-width: 5rem;

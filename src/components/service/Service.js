@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../css/service.css';
 import Navbar from '../home/Navbar';
 import dropData from '../data_models/Dropdown_Data';
@@ -9,7 +9,6 @@ import Gold_Placeholder from '../images/Gold_Carousel_Placeholder.png';
 import Footer from '../home/Footer';
 
 function Service() {
-
 
   return (
     <section>

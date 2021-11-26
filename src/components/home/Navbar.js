@@ -1,18 +1,21 @@
 import React, {useContext} from 'react';
 import '../css/navbar.css';
 import {Link} from 'react-router-dom';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import {userContext} from '../context/userContext';
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {cartContext} from '../context/cartContext';
 
 function Navigation(props) {
 
   console.warn = () => {};
 
-  const {auth, setAuthentication} = useContext(userContext);
+  const {auth} = useContext(userContext);
+
+  const {currentCart} = useContext(cartContext);
 
   function handleSignout() {
-    localStorage.setItem('user', '');
-    localStorage.setItem('authenticated', false);
+    sessionStorage.setItem('user', '');
+    sessionStorage.setItem('authenticated', false);
     //'http://localhost:3000/login' || 'https://ryanstech.xyz/login'
     window.location.assign('https://ryanstech.xyz/login');
   }
@@ -48,8 +51,8 @@ function Navigation(props) {
             <Nav className='ms-auto'>
               <Nav.Link as={Link} to='/cart'>                
                 <i className='fa shopping-cart'>&#xf07a;</i>
-                <span className='badge badge-warning' id='itemNotification' hidden={sessionStorage.length > 0 ? false : true}> 
-                {sessionStorage.length}
+                <span className='badge badge-warning' id='itemNotification' hidden={currentCart.length > 0 ? false : true}>
+                  {currentCart.length}
                 </span>
               </Nav.Link>
                 <Nav.Link as={Link} to='/login' id='login-btn' hidden={typeof auth.authenticated === 'string' ? (auth.authenticated === 'true') : auth.authenticated}>

@@ -56,8 +56,8 @@ function Login() {
       console.log('token registered for login session');
       setAuthentication(previous => ({...previous, user: username, authenticated: true}));
       setValidator('');
-      localStorage.setItem('user', username);
-      localStorage.setItem('authenticated', true);
+      sessionStorage.setItem('user', username);
+      sessionStorage.setItem('authenticated', true);
     }
   }
 

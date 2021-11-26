@@ -6,8 +6,6 @@ import {Link} from 'react-router-dom';
 
 function PaymentMade() {
 
-  sessionStorage.clear();
-  
   return (
     <session className='paymentmade-container'>
       <Navbar items={dropdata}/>
