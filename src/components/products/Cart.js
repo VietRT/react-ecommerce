@@ -1,13 +1,14 @@
 import React, {useState, useContext} from "react";
 import {cartContext} from '../context/cartContext';
 import Navbar from '../home/Navbar';
+import Loader from '../load/Loader';
 import dropData from '../data_models/Dropdown_Data';
 import '../css/cart.css';
 
 function Cart() {
 
+  const [show, setShow] = new useState(false);
   const {currentCart, setCurrentCart} = new useContext(cartContext);
-
   const [total, setTotal] = new useState(() => { 
 
     switch(currentCart.length) {
@@ -28,6 +29,9 @@ function Cart() {
           return initTotal.toFixed(2);
       }
   });
+
+  const startLoading = () => setShow(true);
+  const notLoading = () => setShow(false);
 
   function removeItem(e) {
     const copy = [...currentCart];
@@ -58,7 +62,7 @@ function Cart() {
     });
 
     //'http://localhost:3001/create-stripe-session' || 'https://ecomm-be-server.herokuapp.com/create-stripe-session'
-    const response = await fetch('http://localhost:3001/create-stripe-session', {
+    const response = await fetch('https://ecomm-be-server.herokuapp.com/create-stripe-session', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
@@ -69,13 +73,16 @@ function Cart() {
       if(response.status !== 200) {
         const error = await response.text();
         throw new Error(error);
+        notLoading();
       }else {
         const success = await response.text();
         window.location.href = JSON.parse(success).url;
+        notLoading();
       }
   }
 
   async function handlePayment() {
+    startLoading();
 
     try {
       await fetchCheckoutSession();      
@@ -124,6 +131,7 @@ function Cart() {
 
   return (
     <section>
+      <Loader show={show} onHide={notLoading} />
       <Navbar items={dropData} />
       <ul className="cart-list">
         {currentCart.map((item) => {

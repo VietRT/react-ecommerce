@@ -27,7 +27,7 @@ function Login() {
   async function getValidation() {
 
     //'http://localhost:3001/login/user/auth' || 'https://ecomm-be-server.herokuapp.com/login/user/auth'
-    const response = await fetch('http://localhost:3001/login/user/auth', {
+    const response = await fetch('https://ecomm-be-server.herokuapp.com/login/user/auth', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -71,7 +71,7 @@ function Login() {
   return (
     <section>
       <Navbar items={dropData} />
-      <Loader show={true} onHide={notLoading}/>
+      <Loader show={show} onHide={notLoading}/>
       <div className="login-container">
         <h3 className='login'>Login</h3>
         <h5 id='login-error'>{validator}</h5>
@@ -82,6 +82,7 @@ function Login() {
           </div>
 
           <div>
+          <label htmlFor='email'>Password</label>
             <input required={true} type='password' name='password' id='password' autoComplete="off" ref={loginpassword}/>
           </div>
 

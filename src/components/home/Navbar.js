@@ -17,7 +17,7 @@ function Navigation(props) {
     sessionStorage.setItem('user', '');
     sessionStorage.setItem('authenticated', false);
     //'http://localhost:3000/login' || 'https://ryanstech.xyz/login'
-    window.location.assign('http://localhost:3000/login');
+    window.location.assign('https://ryanstech.xyz/login');
   }
 
   return (
