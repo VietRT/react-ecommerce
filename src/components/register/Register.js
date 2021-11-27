@@ -28,7 +28,7 @@ function Register() {
   async function register() {
     //'http://localhost:3001/api/user' || 'https://ecomm-be-server.herokuapp.com/api/user'
 
-    const response = await fetch('https://ecomm-be-server.herokuapp.com/api/user', {
+    const response = await fetch('http://localhost:3001/api/user', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

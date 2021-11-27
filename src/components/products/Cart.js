@@ -58,7 +58,7 @@ function Cart() {
     });
 
     //'http://localhost:3001/create-stripe-session' || 'https://ecomm-be-server.herokuapp.com/create-stripe-session'
-    const response = await fetch('https://ecomm-be-server.herokuapp.com/create-stripe-session', {
+    const response = await fetch('http://localhost:3001/create-stripe-session', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

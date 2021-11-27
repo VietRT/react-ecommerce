@@ -1,29 +1,23 @@
 import React, {useState, useContext, useRef} from "react";
 import '../css/login.css';
 import Navbar from '../home/Navbar';
+import Loader from '../load/Loader';
 import {Link} from 'react-router-dom';
 import dropData from '../data_models/Dropdown_Data';
 import {userContext} from '../context/userContext';
 
 function Login() {
 
-  // const [credentials, setCredentials] = new useState({
-  //   email: '',
-  //   password: ''
-  // });
-
   const loginemail = new useRef(null);
   const loginpassword = new useRef(null);
-
   const [validator, setValidator] = new useState('');
+  const {setAuthentication} = useContext(userContext);
+  
+  const [show, setShow] = new useState(false);
 
-  const {auth, setAuthentication} = useContext(userContext);
+  const startLoading = () => setShow(true);
 
-  // function handleCredentials(key)  {
-  //     return (({target: {value}}) => {
-  //       setCredentials(previous => ({...previous, [key]: value}));
-  //     });
-  // }
+  const notLoading = () => setShow(false);
 
   function resetLoginInputs() {
     loginemail.current.value = '';
@@ -33,7 +27,7 @@ function Login() {
   async function getValidation() {
 
     //'http://localhost:3001/login/user/auth' || 'https://ecomm-be-server.herokuapp.com/login/user/auth'
-    const response = await fetch('https://ecomm-be-server.herokuapp.com/login/user/auth', {
+    const response = await fetch('http://localhost:3001/login/user/auth', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -51,23 +45,20 @@ function Login() {
     if(response.status !== 200) {
       const err = await response.text();
       setValidator(err);
+      notLoading();
     }else {
       const username = await response.text();
-      console.log('token registered for login session');
-      setAuthentication(previous => ({...previous, user: username, authenticated: true}));
-      setValidator('');
       sessionStorage.setItem('user', username);
       sessionStorage.setItem('authenticated', true);
+      setAuthentication(previous => ({...previous, user: username, authenticated: true}));
+      setValidator('');
+      notLoading();
     }
   }
 
   function handleValidation(e) {
     e.preventDefault();
-
-    // setCredentials({
-    //   email: '',
-    //   password: ''
-    // });
+    startLoading();
 
     try {
       getValidation();
@@ -80,19 +71,17 @@ function Login() {
   return (
     <section>
       <Navbar items={dropData} />
+      <Loader show={true} onHide={notLoading}/>
       <div className="login-container">
         <h3 className='login'>Login</h3>
         <h5 id='login-error'>{validator}</h5>
         <form className='login-form' action='/' method='POST'> 
           <div>
             <label htmlFor='email'>Email</label>
-            {/* onChange={handleCredentials('email')} */}
             <input required={true} type='text' name='email' id='email' autoComplete="off" ref={loginemail}/>
           </div>
 
           <div>
-            <label htmlFor='password'>Password</label>          
-            {/* onChange={handleCredentials('password')} */}
             <input required={true} type='password' name='password' id='password' autoComplete="off" ref={loginpassword}/>
           </div>
 
