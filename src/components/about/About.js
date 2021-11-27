@@ -23,7 +23,6 @@ function About() {
   }]);
 
   function handleShow(e) {
-    console.log(e.target.parentNode.id);
     let oci = [];
 
     oci = offcanvasData.filter((item) => {
@@ -121,7 +120,10 @@ function About() {
         </Row>
       </Container>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      {/* <Container>
+        <Row>
+          <Col lg={12}> */}
+            <Offcanvas show={show} onHide={handleClose}>
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>{offcanvasInfo[0].offcanvasTitle}</Offcanvas.Title>
               </Offcanvas.Header>
@@ -129,6 +131,11 @@ function About() {
                 <p id='description-wrapper'>{offcanvasInfo[0].offcanvasBody}</p>
               </Offcanvas.Body>
             </Offcanvas>
+          {/* </Col>
+        </Row>
+      </Container> */}
+
+      
       <Footer />
     </section>
   );

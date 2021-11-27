@@ -114,3 +114,7 @@
 #description-wrapper {
   white-space: pre-line;
 }
+
+.modal-open {
+  padding-right: 0px !important;
+}
