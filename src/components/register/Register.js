@@ -41,21 +41,20 @@ function Register() {
       password: information.password,
       username: information.username
     })
-  });
-
-  if(response.status !== 200) {
-    const error = await response.text();
-    throw new Error(`${error}`);
-  }else {
-    const success = await response.text();
-    setValidator(previous => ({...previous, message: success, style: {color: 'green'}}));
-    setInfo({    
-      email: '',
-      password:'',
-      username: ''
     });
-  }
 
+    if(response.status !== 200) {
+      const error = await response.text();
+      throw new Error(`${error}`);
+    }else {
+      const success = await response.text();
+      setValidator(previous => ({...previous, message: success, style: {color: 'green'}}));
+      setInfo({    
+        email: '',
+        password:'',
+        username: ''
+      });
+    }
   }
 
   async function handleSubmit(e) {
@@ -74,7 +73,7 @@ function Register() {
       <div className='register-container'>
         <h3 className='register'>Create Account</h3>
         <h5 className='validator-message' style={validator.style}>{validator.message}</h5>
-        <form className='register-form' action='/api/user' method='post'>
+        <form className='register-form' method='post'>
 
           <div>
             <label htmlFor='username'>Username*</label>

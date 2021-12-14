@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import '../css/navbar.css';
 import {Link} from 'react-router-dom';
 import {userContext} from '../context/userContext';
@@ -8,7 +8,7 @@ import {cartContext} from '../context/cartContext';
 function Navigation(props) {
 
   console.warn = () => {};
-
+  
   const {auth} = useContext(userContext);
 
   const {currentCart} = useContext(cartContext);
@@ -27,10 +27,18 @@ function Navigation(props) {
             <Nav.Link as={Link} to='/'>
               <p id='brand-logo'>EWA<span id='full-brand-name'> | Ecommerce Web Application</span></p>
             </Nav.Link>
-          </Navbar.Brand>         
+          </Navbar.Brand>
+          <Nav className='ms-auto'>
+            <Nav.Link id='fa-cart-mobile-anchor' as={Link} to='/cart'>                
+              <i className='fa shopping fa-cart-mobile'>&#xf07a;</i>
+              <span className='badge badge-warning' id='itemNotification' hidden={currentCart.length > 0 ? false : true}>
+                {currentCart.length}
+              </span>
+            </Nav.Link>    
+          </Nav>     
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='mx-auto'>
+            <Nav className='mx-auto'> {/* push content to the center */}
               <Nav.Link as={Link} to='/' className='navigation-list-item'>
                 About
               </Nav.Link>
@@ -48,9 +56,9 @@ function Navigation(props) {
                 About Me
               </Nav.Link>
             </Nav>       
-            <Nav className='ms-auto'>
-              <Nav.Link as={Link} to='/cart'>                
-                <i className='fa shopping-cart'>&#xf07a;</i>
+            <Nav className='ms-auto'> {/* push content to the right */}
+              <Nav.Link id='fa-cart-non-mobile-anchor' as={Link} to='/cart'>                
+                <i className='fa shopping-cart fa-cart-non-mobile'>&#xf07a;</i>
                 <span className='badge badge-warning' id='itemNotification' hidden={currentCart.length > 0 ? false : true}>
                   {currentCart.length}
                 </span>

@@ -51,8 +51,9 @@ function Login() {
       sessionStorage.setItem('user', username);
       sessionStorage.setItem('authenticated', true);
       setAuthentication(previous => ({...previous, user: username, authenticated: true}));
-      setValidator('');
+      // setValidator(''); no need to reset validator
       notLoading();
+      window.location.assign('https://ryanstech.xyz/');
     }
   }
 
@@ -75,7 +76,7 @@ function Login() {
       <div className="login-container">
         <h3 className='login'>Login</h3>
         <h5 id='login-error'>{validator}</h5>
-        <form className='login-form' action='/' method='POST'> 
+        <form className='login-form' method='post'> 
           <div>
             <label htmlFor='email'>Email</label>
             <input required={true} type='text' name='email' id='email' autoComplete="off" ref={loginemail}/>
